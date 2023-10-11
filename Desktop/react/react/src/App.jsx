@@ -6,7 +6,7 @@ import Head from "./pages/navbar/Head";
 import Newform from "./pages/form/Newform";
 import Home from "./pages/home/Home";
 import { useState } from "react";
-// import Error from "./pages/error/Error";
+import Error from "./pages/error/Error";
 
 function App() {
   const [open, setOpen] = useState("none");
@@ -38,6 +38,8 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="contact" element={<Contact />} />
         <Route path="newform" element={<Newform />} />
+        <Route path="*" element={<Error />} />
+
       </Routes>
     </>
   );

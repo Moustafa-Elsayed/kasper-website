@@ -17,7 +17,7 @@ import CloseIcon from "@mui/icons-material/Close";
 // eslint-disable-next-line react/prop-types
 const Head = ({ open, setOpen, close, setClose }) => {
   const navigate = useNavigate();
-
+  // const location = useLocation();
   return (
     <>
       <AppBar position="fixed" color="primary">
@@ -30,6 +30,7 @@ const Head = ({ open, setOpen, close, setClose }) => {
             <Box sx={{ display: "flex" }}>
               <ListItemButton>
                 <ListItemText
+                  sx={{}}
                   primary="Home"
                   onClick={() => {
                     navigate("/");
@@ -59,6 +60,7 @@ const Head = ({ open, setOpen, close, setClose }) => {
                 color="inherit"
                 onClick={() => {
                   navigate("/newform");
+                  
                 }}
               >
                 Sign-In

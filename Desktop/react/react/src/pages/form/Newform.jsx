@@ -7,7 +7,7 @@ import Button from "@mui/material/Button";
 
 const Newform = () => {
   return (
-    <div className="contact">
+    <div className="contact" style={{paddingTop:"90px"}}>
       <Typography gutterBottom variant="h3" align="center">
         Contact
       </Typography>
@@ -62,7 +62,7 @@ const Newform = () => {
                   fullWidth
                   required
                   multiline
-                  rows={5}
+                  rows={3}
                 />
               </Grid>
               <Grid xs={12} item>

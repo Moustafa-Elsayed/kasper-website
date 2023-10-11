@@ -1,4 +1,4 @@
-import { Box, Typography, Grid, Container } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import CoffeeIcon from "@mui/icons-material/Coffee";
 import DriveFileMoveIcon from "@mui/icons-material/DriveFileMove";
 import EmailIcon from "@mui/icons-material/Email";
@@ -28,7 +28,7 @@ const About = () => {
           <img src=".\img\about.png" alt="" />
         </Box>
       </Box>
-      <Box  padding="0 30px">
+      <Box padding="0 30px">
         <Grid container spacing={0} bgcolor="#1976d2" padding="45px 55px">
           <Grid xs={12} md={3} l={3} item>
             <CoffeeIcon fontSize="large" sx={{ mb: "10px" }} />
