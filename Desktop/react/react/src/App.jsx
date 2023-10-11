@@ -30,13 +30,12 @@ function App() {
   // }, []);
   return (
     <>
-      <Head open={open} setOpen={setOpen} close={close} setClose={setClose}/>
+      <Head open={open} setOpen={setOpen} close={close} setClose={setClose} />
       {/* <Nav /> */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="contact" element={<Contact />} />
-
         <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
         <Route path="contact" element={<Contact />} />
         <Route path="newform" element={<Newform />} />
       </Routes>
