@@ -79,7 +79,7 @@ const Head = ({ open, setOpen, close, setClose }) => {
       <Drawer
         open={true}
         onClose={() => {
-          setClose("permanent")
+          setClose("permanent");
           setOpen("none");
         }}
         sx={{
@@ -91,7 +91,6 @@ const Head = ({ open, setOpen, close, setClose }) => {
             boxSizing: "border-box",
           },
           display: { xs: open },
-        
         }}
         variant={close}
         anchor="right"
