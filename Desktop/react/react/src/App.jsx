@@ -28,6 +28,7 @@ function App() {
   // useEffect(() => {
   //   getData();
   // }, []);
+
   return (
     <>
       <Head open={open} setOpen={setOpen} close={close} setClose={setClose} />
@@ -39,7 +40,6 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="newform" element={<Newform />} />
         <Route path="*" element={<Error />} />
-
       </Routes>
     </>
   );

@@ -5,10 +5,10 @@ import {
   Drawer,
   ListItemButton,
   ListItemText,
+  AppBar,
+  Toolbar,
+  Typography,
 } from "@mui/material";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import LoginIcon from "@mui/icons-material/Login";
 import { useNavigate } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -60,7 +60,6 @@ const Head = ({ open, setOpen, close, setClose }) => {
                 color="inherit"
                 onClick={() => {
                   navigate("/newform");
-                  
                 }}
               >
                 Sign-In
@@ -72,6 +71,7 @@ const Head = ({ open, setOpen, close, setClose }) => {
             onClick={() => {
               setClose("temporary");
               setOpen("block");
+              console.log("done");
             }}
             sx={{ display: { xs: "block", md: "none" } }}
           />
@@ -89,7 +89,7 @@ const Head = ({ open, setOpen, close, setClose }) => {
           width: 250,
           flexShrink: 0,
           "& .MuiDrawer-paper": {
-            width: 250,
+            width: { xs: "50%", sm: "250px" },
             boxSizing: "border-box",
           },
           display: { xs: open },

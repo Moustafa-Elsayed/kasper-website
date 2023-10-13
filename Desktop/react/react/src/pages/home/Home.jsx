@@ -1,10 +1,13 @@
+import Slider from "../../components/Slider";
+import About from "../about/About";
 
 const Home = () => {
   return (
-<div className="landing">
-  <img src=" .\img\landing.jpg" alt="" />
-</div>
-  )
-}
+    <>
+      <Slider />
+      <About />
+    </>
+  );
+};
 
-export default Home
+export default Home;

@@ -13,7 +13,7 @@ function Form() {
     if (!name) {
       setError("name is requried");
     } else {
-      console.log({ name, password, gender });
+      console.log({ name });
     }
     postData();
   };
@@ -44,7 +44,6 @@ function Form() {
         <div className="form-data">
           <div className="content">
             <div className="inputs">
-            
               <input
                 type="text"
                 placeholder="title"
@@ -56,8 +55,6 @@ function Form() {
             </div>
             <br />
             <div className="inputs">
-            
-
               <input
                 type="text"
                 placeholder="price"
