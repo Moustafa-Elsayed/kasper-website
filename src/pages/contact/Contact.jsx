@@ -6,7 +6,6 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { useFormik } from "formik";
 import { basicShema } from "../../components/Schemas";
-
 const onSubmit = () => {
   console.log("submitted");
 };
