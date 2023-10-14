@@ -7,7 +7,7 @@ import Newform from "./pages/form/Newform";
 import Home from "./pages/home/Home";
 import { useState } from "react";
 import Error from "./pages/error/Error";
-//app function
+
 function App() {
   const [open, setOpen] = useState("none");
   const [close, setClose] = useState("permanent");
