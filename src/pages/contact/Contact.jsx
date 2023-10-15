@@ -6,10 +6,13 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { useFormik } from "formik";
 import { basicShema } from "../../components/Schemas";
-const onSubmit = () => {
-  console.log("submitted");
-};
+import axios from "axios";
+
 const Contact = () => {
+  const onSubmit = () => {
+    console.log("submitted");
+    postData();
+  };
   const { handleBlur, errors, touched, handleChange, values, handleSubmit } =
     useFormik({
       initialValues: {
@@ -22,11 +25,29 @@ const Contact = () => {
       validationSchema: basicShema,
       onSubmit,
     });
+  const postData = () => {
+    const body = {
+      firstName: values.firstName,
+      lastName: values.lastName,
+      email: values.email,
+      phone: values.phone,
+      message: values.message,
+    };
+    console.log(body);
+    axios
+      .post("https://fakestoreapi.com/products", body)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div className="contact" style={{ paddingTop: "90px" }}>
       <Typography gutterBottom variant="h3" align="center">
-        Contact 
+        Contact
       </Typography>
       <Card
         sx={{

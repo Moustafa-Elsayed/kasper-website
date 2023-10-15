@@ -6,10 +6,13 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { useFormik } from "formik";
 import { logSchema } from "../../components/Schemas";
-const onSubmit = () => {
-  console.log("submitted");
-};
+import axios from "axios";
+
 const Newform = () => {
+  const onSubmit = () => {
+    console.log("submitted");
+    postData();
+  };
   const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
     useFormik({
       initialValues: {
@@ -21,6 +24,24 @@ const Newform = () => {
       validationSchema: logSchema,
       onSubmit,
     });
+
+  const postData = () => {
+    const body = {
+      username: values.username,
+      email: values.email,
+      password: values.password,
+      cpassword: values.cpassword,
+    };
+    console.log(body);
+    axios
+      .post("https://fakestoreapi.com/products", body)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <div className="contact" style={{ paddingTop: "90px" }}>
       <Typography gutterBottom variant="h3" align="center">
