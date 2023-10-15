@@ -19,9 +19,9 @@ const About = () => {
           sx={{ paddingTop: "120px ", position: "relative", margin: "0 auto" }}
         >
           <Typography
-            variant="h3"
+            variant="h2"
             color="initial"
-            sx={{ marginBottom: "20px",fontSize:{xs:"2.5rem",sm:"3rem"} }}
+            sx={{ marginBottom: "20px",fontSize:{xs:"2.5rem",sm:"3rem"},fontWeight:"bold" }}
           >
             About us
           </Typography>

@@ -23,11 +23,26 @@ const Products = () => {
   console.log(data);
   return (
     <Container maxWidth="lg">
-      <Grid container spacing={3}>
+      <Typography
+        variant="h4"
+        color="initial"
+        sx={{ marginTop: "20px", fontWeight: "bold" }}
+      >
+        Popular Products
+      </Typography>
+      <Grid container spacing={5}>
         {data.map((product) => (
-          <Grid key={product.id} item  xs={6} sm={4} md={3}>
-            <Card sx={{ marginBottom: "20px",marginTop:"30px" }}>
-              <CardActionArea >
+          <Grid key={product.id} item xs={12} sm={6}  md={4} lg={3}>
+            <Card
+              elevation={5}
+              sx={{
+                marginBottom: "20px",
+                marginTop: "30px",
+                borderRadius: "9px",
+                height: "100%",
+              }}
+            >
+              <CardActionArea>
                 <CardMedia
                   component="img"
                   height="140"
@@ -35,17 +50,22 @@ const Products = () => {
                   image={product.image}
                   alt="green iguana"
                 />
-                <CardContent sx={{minHeight:"180px"}}>
-                  <Typography gutterBottom variant="body2" component="div"  >
+                <CardContent>
+                  <Typography
+                    gutterBottom
+                    variant="body2"
+                    component="div"
+                    color="text.secondary"
+                  >
                     {product.title}
                   </Typography>
-                  <Typography variant="h5" color="text.secondary">
+                  <Typography variant="h5" color="intial">
                     {product.price}$
                   </Typography>
                 </CardContent>
               </CardActionArea>
-              <CardActions sx={{justifyContent:"center"}}>
-                <Button size="small" color="primary" variant="contained"  >
+              <CardActions sx={{ justifyContent: "center" }}>
+                <Button size="small" color="primary" variant="contained">
                   Details
                 </Button>
               </CardActions>
