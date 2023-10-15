@@ -26,7 +26,7 @@ const Slider = () => {
         <img
           src=".\img\carosul1.jpg"
           alt=""
-          style={{ width: "100%", height: "100vh" }}
+          style={{ width: "100%",height: "100vh" }}
         />
       </SwiperSlide>
       <SwiperSlide>

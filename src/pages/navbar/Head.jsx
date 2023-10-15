@@ -97,7 +97,12 @@ const Head = ({ open, setOpen, close, setClose }) => {
         variant={close}
         anchor="right"
       >
-        <CloseIcon sx={{ position: "absolute", right: 13, top: 13 }} />
+        <CloseIcon
+          onClick={() => {
+            console.log("clicked");
+          }}
+          sx={{ position: "absolute", right: 13, top: 13 }}
+        />
 
         <Toolbar />
         <Divider />

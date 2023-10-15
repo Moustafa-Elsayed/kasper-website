@@ -80,6 +80,7 @@ const Newform = () => {
                 <TextField
                   id="email"
                   name="email"
+                  type="Email"
                   value={values.email}
                   onChange={handleChange}
                   onBlur={handleBlur}

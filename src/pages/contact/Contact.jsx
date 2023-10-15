@@ -98,6 +98,7 @@ const Contact = () => {
                 <TextField
                   name="email"
                   id="email"
+                  type="email"
                   value={values.email}
                   placeholder="Enter Your Email"
                   label="E-mail"

@@ -12,6 +12,12 @@ function App() {
   const [open, setOpen] = useState("none");
   const [close, setClose] = useState("permanent");
 
+
+
+
+
+  
+
   // const [data, setData] = useState("");
   // const getData = () => {
   //   const body = {
