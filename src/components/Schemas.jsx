@@ -11,13 +11,13 @@ export const basicShema = yup.object({
     .required("please enter your mesage"),
 });
 
-const passwordRules=/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/;
+// const passwordRules=/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/;
 export const logSchema=yup.object({
   username:yup.string().min(5).required("please enter your user name"),
   email: yup.string().email("enter valid email").required("please enter your email"),
   password:yup.string()
   .min(5)
-  .matches(passwordRules,{message:"please create strong password(min 5character & 1 upper case letter & 1 lower case letter and 1 numeric digit)"})
+  // .matches(passwordRules,{message:"please create strong password(min 5character & 1 upper case letter & 1 lower case letter and 1 numeric digit)"})
   .required("required"),
   cpassword:yup.string()
   .oneOf([yup.ref("password"),null],"password must match ").required("required")
