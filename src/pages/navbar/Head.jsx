@@ -113,6 +113,8 @@ const Head = ({ open, setOpen, close, setClose }) => {
                 primary="Home"
                 onClick={() => {
                   navigate("/");
+                  setClose("permanent");
+                  setOpen("none");
                 }}
               />
             </ListItemButton>
@@ -121,6 +123,8 @@ const Head = ({ open, setOpen, close, setClose }) => {
                 primary="About"
                 onClick={() => {
                   navigate("/about");
+                  setClose("permanent");
+                  setOpen("none");
                 }}
               />
             </ListItemButton>
@@ -129,6 +133,8 @@ const Head = ({ open, setOpen, close, setClose }) => {
                 primary="Contact"
                 onClick={() => {
                   navigate("/contact");
+                  setClose("permanent");
+                  setOpen("none");
                 }}
               />
             </ListItemButton>
@@ -141,6 +147,8 @@ const Head = ({ open, setOpen, close, setClose }) => {
               color="inherit"
               onClick={() => {
                 navigate("/newform");
+                setClose("permanent");
+                setOpen("none");
               }}
             >
               Sign-Up
