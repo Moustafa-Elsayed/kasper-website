@@ -14,8 +14,9 @@ const Slider = () => {
   }, []);
   return (
     <Swiper
-      spaceBetween={50}
+      spaceBetween={20}
       slidesPerView={1}
+      centeredSlides={true}
       modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
       effect="fade"
       navigation
@@ -26,21 +27,21 @@ const Slider = () => {
         <img
           src=".\img\carosul1.jpg"
           alt=""
-          style={{ width: "100%",height: "100%" }}
+          style={{ width: "100%",  display: "block" }}
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
           src=".\img\carosul2jpg.jpg"
           alt=""
-          style={{ width: "100%", height: "100%" }}
+          style={{ width: "100%", display: "block" }}
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
           src=".\img\carusol3.jpg"
           alt=""
-          style={{ width: "100%", height: "100%" }}
+          style={{ width: "100%", display: "block" }}
         />
       </SwiperSlide>
     </Swiper>
