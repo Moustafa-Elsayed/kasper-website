@@ -20,27 +20,27 @@ const Slider = () => {
       effect="fade"
       navigation
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
+      scrollbar={{ draggable: false }}
     >
       <SwiperSlide>
         <img
           src=".\img\carosul1.jpg"
           alt=""
-          style={{ width: "100%",height: "100vh" }}
+          style={{ width: "100%",height: "100%" }}
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
           src=".\img\carosul2jpg.jpg"
           alt=""
-          style={{ width: "100%", height: "100vh" }}
+          style={{ width: "100%", height: "100%" }}
         />
       </SwiperSlide>
       <SwiperSlide>
         <img
           src=".\img\carusol3.jpg"
           alt=""
-          style={{ width: "100%", height: "100vh" }}
+          style={{ width: "100%", height: "100%" }}
         />
       </SwiperSlide>
     </Swiper>
