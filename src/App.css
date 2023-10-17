@@ -1,15 +1,12 @@
 #root {
-  max-width: 1280px;
   margin: 0;
   padding: 0;
   text-align: center;
 }
-body {
-  background-color: black;
-}
-.landing img {
+
+/* .landing img {
   height: 100vh;
   background-position: center;
   background-size: cover;
   width: 100%;
-}
+} */

@@ -1,23 +1,31 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+// import { Routes, Route } from "react-router-dom";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
-import Head from "./pages/navbar/Head";
 import Newform from "./pages/form/Newform";
 import Home from "./pages/home/Home";
-import { useState } from "react";
 import Error from "./pages/error/Error";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+import Root from "./pages/root/Root";
 
 function App() {
-  const [open, setOpen] = useState("none");
-  const [close, setClose] = useState("permanent");
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+    <Route path="/" element={<Root />}>
+      <Route index  element={<Home />} />
+      <Route path="about" element={<About />} />
+      <Route path="*" element={<Error />} />
+      <Route path="contact" element={<Contact />} />
+      <Route path="sign" element={<Newform />} />
 
 
-
-
-
-  
-
+    </Route>)
+  );
   // const [data, setData] = useState("");
   // const getData = () => {
   //   const body = {
@@ -37,16 +45,7 @@ function App() {
 
   return (
     <>
-      <Head open={open} setOpen={setOpen} close={close} setClose={setClose} />
-      {/* <Nav /> */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="newform" element={<Newform />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
+      <RouterProvider router={router} />
     </>
   );
 }

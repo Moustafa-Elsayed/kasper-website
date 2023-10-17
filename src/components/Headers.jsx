@@ -17,9 +17,12 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import HomeIcon from "@mui/icons-material/Home";
 import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 import ContactEmergencyIcon from "@mui/icons-material/ContactEmergency";
+import { useState } from "react";
 
 // eslint-disable-next-line react/prop-types
-const Head = ({ open, setOpen, close, setClose }) => {
+const Head = () => {
+  const [open, setOpen] = useState("none");
+  const [close, setClose] = useState("permanent");
   const navigate = useNavigate();
   // const location = useLocation();
   return (
@@ -63,7 +66,7 @@ const Head = ({ open, setOpen, close, setClose }) => {
                 variant="outlined"
                 color="inherit"
                 onClick={() => {
-                  navigate("/newform");
+                  navigate("/sign");
                 }}
               >
                 Sign-In
@@ -168,7 +171,7 @@ const Head = ({ open, setOpen, close, setClose }) => {
               variant="outlined"
               color="inherit"
               onClick={() => {
-                navigate("/newform");
+                navigate("/sign");
                 setClose("permanent");
                 setOpen("none");
               }}
