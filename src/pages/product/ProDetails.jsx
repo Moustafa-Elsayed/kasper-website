@@ -65,7 +65,7 @@ const ProDetails = () => {
             <Typography gutterBottom variant="body1">
               {data.description}
             </Typography>
-            <Typography variant="body2" color="primary">
+            <Typography variant="body2" color="primary" sx={{marginBottom:"10px"}} >
               {data.price}$
             </Typography>
             <Button variant="outlined" disabled>
