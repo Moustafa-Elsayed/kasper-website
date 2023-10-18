@@ -1,5 +1,4 @@
 import "./App.css";
-// import { Routes, Route } from "react-router-dom";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Newform from "./pages/form/Newform";
@@ -12,19 +11,21 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Root from "./pages/root/Root";
+import ProDetails from "./pages/product/ProDetails";
+// import ProDetails from "./pages/product/ProDetails";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-    <Route path="/" element={<Root />}>
-      <Route index  element={<Home />} />
-      <Route path="about" element={<About />} />
-      <Route path="*" element={<Error />} />
-      <Route path="contact" element={<Contact />} />
-      <Route path="sign" element={<Newform />} />
-
-
-    </Route>)
+      <Route path="/" element={<Root />}>
+        <Route index element={<Home />} />
+        <Route path="*" element={<Error />} />
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="sign" element={<Newform />} />
+        <Route path="product/:id" element={<ProDetails />} />
+      </Route>
+    )
   );
   // const [data, setData] = useState("");
   // const getData = () => {
