@@ -40,7 +40,6 @@ const Products = () => {
               >
                 <CardActionArea>
                   <CardMedia
-                    marginTop="30px"
                     component="img"
                     height="140"
                     image={product.image}
@@ -51,8 +50,8 @@ const Products = () => {
                     <Typography gutterBottom variant="h5" component="div">
                       {product.category}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {product.price}
+                    <Typography variant="body2" color="text.secondary" sx={{marginBottom:"5px"}}>
+                      {product.price}$
                     </Typography>
                     <Button size="small" color="primary" variant="contained"
                     onClick={()=>{

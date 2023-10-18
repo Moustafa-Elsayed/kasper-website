@@ -28,9 +28,8 @@ const ProDetails = () => {
         elevation={5}
         sx={{
           maxWidth: "600px",
-          maxHeight: "",
           borderRadius: "9px",
-          margin: "150px auto 0",
+          margin: "130px auto 0",
           position: "relative",
         }}
       >
@@ -41,7 +40,12 @@ const ProDetails = () => {
           startIcon={<ArrowBackIosNewIcon />}
           variant="text"
           color="primary"
-        sx={{position:"absolute",top:"13px",left:"13px",zIndex:"222"}}
+          sx={{
+            position: "absolute",
+            top: "13px",
+            left: "13px",
+            zIndex: "222",
+          }}
         >
           Back
         </Button>
@@ -64,6 +68,9 @@ const ProDetails = () => {
             <Typography variant="body2" color="primary">
               {data.price}$
             </Typography>
+            <Button variant="outlined" disabled>
+              Buy Now
+            </Button>
           </CardContent>
         </CardActionArea>
       </Card>

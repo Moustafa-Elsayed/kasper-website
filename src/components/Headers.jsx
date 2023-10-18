@@ -10,41 +10,55 @@ import {
   Typography,
 } from "@mui/material";
 import LoginIcon from "@mui/icons-material/Login";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import HomeIcon from "@mui/icons-material/Home";
-import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
-import ContactEmergencyIcon from "@mui/icons-material/ContactEmergency";
 import { useState } from "react";
+import "./Header.css";
 
 // eslint-disable-next-line react/prop-types
 const Head = () => {
   const [open, setOpen] = useState("none");
   const [close, setClose] = useState("permanent");
   const navigate = useNavigate();
-  // const location = useLocation();
+  const location = useLocation();
   return (
     <>
       <AppBar position="fixed" color="primary">
         <Toolbar sx={{ justifyContent: "space-between" }}>
           <Typography>
-            <img src=".\img\logo.png" />
+            <img
+              src=".\img\logo.png"
+              onClick={() => {
+                navigate("/");
+              }}
+            />
           </Typography>
 
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             <Box sx={{ display: "flex" }}>
-              <ListItemButton>
+              <ListItemButton
+                sx={{
+                  "&:hover": {
+                    color: "black",
+                    backgroundColor: "transparent",
+                  },
+                  color: location.pathname === "/" ? "black" : null,
+                }}
+              >
                 <ListItemText
-                  sx={{}}
                   primary="Home"
                   onClick={() => {
                     navigate("/");
                   }}
                 />
               </ListItemButton>
-              <ListItemButton>
+              <ListItemButton
+                sx={{
+                  "&:hover": { color: "black", backgroundColor: "transparent" },
+                  color: location.pathname === "/about" ? "black" : null,
+                }}
+              >
                 <ListItemText
                   primary="About"
                   onClick={() => {
@@ -52,7 +66,12 @@ const Head = () => {
                   }}
                 />
               </ListItemButton>
-              <ListItemButton>
+              <ListItemButton
+                sx={{
+                  "&:hover": { color: "black", backgroundColor: "transparent" },
+                  color: location.pathname === "/contact" ? "black" : null,
+                }}
+              >
                 <ListItemText
                   primary="Contact"
                   onClick={() => {
@@ -62,6 +81,10 @@ const Head = () => {
               </ListItemButton>
 
               <Button
+                sx={{
+                  "&:hover": { color: "black", backgroundColor: "transparent" },
+                  color: location.pathname === "/sign" ? "black" : null,
+                }}
                 startIcon={<LoginIcon />}
                 variant="outlined"
                 color="inherit"
@@ -84,7 +107,7 @@ const Head = () => {
           />
         </Toolbar>
       </AppBar>
-
+      {/* start Drawer */}
       <Drawer
         open={true}
         onClose={() => {
@@ -120,65 +143,72 @@ const Head = () => {
 
         <Toolbar />
         <Divider />
-        <Box sx={{ display: "flex", flexDirection: "column" }}>
-          <Box>
-            <ListItemButton sx={{ mb: 1 }}>
-              <ListItemIcon>
-                <HomeIcon />
-              </ListItemIcon>
-              <ListItemText
-                primary="Home"
-                onClick={() => {
-                  navigate("/");
-                  setClose("permanent");
-                  setOpen("none");
-                }}
-              />
-            </ListItemButton>
-
-            <ListItemButton sx={{ textAlign: "center", mb: 1 }}>
-              <ListItemIcon>
-                <ContactEmergencyIcon />
-              </ListItemIcon>
-
-              <ListItemText
-                primary="About"
-                onClick={() => {
-                  navigate("/about");
-                  setClose("permanent");
-                  setOpen("none");
-                }}
-              />
-            </ListItemButton>
-            <ListItemButton sx={{ textAlign: "center", mb: 1 }}>
-              <ListItemIcon>
-                <PermContactCalendarIcon />
-              </ListItemIcon>
-              <ListItemText
-                primary="Contact"
-                onClick={() => {
-                  navigate("/contact");
-                  setClose("permanent");
-                  setOpen("none");
-                }}
-              />
-            </ListItemButton>
-
-            <Button
-              sx={{ textAlign: "center", mb: 1 }}
-              fullWidth
-              startIcon={<LoginIcon />}
-              variant="outlined"
-              color="inherit"
+        <Box>
+          <ListItemButton
+            sx={{
+              textAlign: "center",
+              mb: 1,
+              "&:hover": { backgroundColor: "#1976d2" },
+            }}
+          >
+            <ListItemText
+              className="drawer-links"
+              primary="Home"
               onClick={() => {
-                navigate("/sign");
+                navigate("/");
                 setClose("permanent");
                 setOpen("none");
               }}
-            >
-              Sign-Up
-            </Button>
-          </Box>
+            />
+          </ListItemButton>
+
+          <ListItemButton
+            sx={{
+              textAlign: "center",
+              mb: 1,
+              "&:hover": { backgroundColor: "#1976d2" },
+            }}
+          >
+            <ListItemText
+              primary="About"
+              onClick={() => {
+                navigate("/about");
+                setClose("permanent");
+                setOpen("none");
+              }}
+            />
+          </ListItemButton>
+          <ListItemButton
+            sx={{
+              textAlign: "center",
+              mb: 1,
+              "&:hover": { backgroundColor: "#1976d2" },
+            }}
+          >
+            <ListItemText
+              primary="Contact"
+              onClick={() => {
+                navigate("/contact");
+                setClose("permanent");
+                setOpen("none");
+              }}
+            />
+          </ListItemButton>
+
+          <Button
+            sx={{ textAlign: "center", mb: 1 }}
+            fullWidth
+            startIcon={<LoginIcon />}
+            variant="outlined"
+            color="inherit"
+            onClick={() => {
+              navigate("/sign");
+              setClose("permanent");
+              setOpen("none");
+            }}
+          >
+            Sign-Up
+          </Button>
         </Box>
       </Drawer>
     </>
