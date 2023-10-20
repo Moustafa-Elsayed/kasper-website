@@ -1,16 +1,11 @@
-import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-} from "swiper/modules";
+import "swiper/css";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { EffectFade } from "swiper/modules";
+import "./Slider.css";
+
 import { useEffect } from "react";
 import Aos from "aos";
 
@@ -20,18 +15,22 @@ const Slider = () => {
   }, []);
   return (
     <Swiper
-      spaceBetween={10}
-      slidesPerView={1}
-      centeredSlides={true}
-      autoplay={{
-        delay: 2000,
-        disableOnInteraction: false,
-      }}
-      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade]}
-      effect="fade"
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: false }}
+    spaceBetween={30}
+    slidesPerView={1}
+    centeredSlides={true}
+    autoplay={{
+      delay: 2500,
+      disableOnInteraction: false,
+    }}
+    pagination={{
+      clickable: true,
+    }}
+    navigation={true}
+    modules={[Autoplay, Pagination, Navigation]}
+    className="mySwiper"
+    scrollbar={{ draggable: true }}
+    onSwiper={(swiper) => console.log(swiper)}
+    onSlideChange={() => console.log("slide change")}
     >
       <SwiperSlide className="swiper-slider">
         <img

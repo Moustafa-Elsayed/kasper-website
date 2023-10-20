@@ -11,10 +11,10 @@ const Home = () => {
       <Slider />
       <Container maxWidth="lg">
         <About />
+      <Card />
         <Products />
         <Services />
       </Container>
-      <Card />
     </>
   );
 };

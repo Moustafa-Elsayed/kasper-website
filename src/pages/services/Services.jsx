@@ -18,7 +18,7 @@ const Services = () => {
           variant=""
           color="initial"
           sx={{
-            border: "3px solid #1976d2",
+            border: "1px solid #1976d2",
             padding: "9px",
             borderRadius: "5px",
           }}
