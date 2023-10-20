@@ -1,34 +1,51 @@
 import Typography from "@mui/material/Typography";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Grid, Container } from "@mui/material";
+import { Grid } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { Button, CardActionArea } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-
+import { useDispatch, useSelector } from "react-redux";
+import { storeData } from "../../redux/productReducer";
 const Products = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const url = "https://fakestoreapi.com/products";
   const [data, setData] = useState([]);
+  const dispatch = useDispatch();
+  // eslint-disable-next-line no-unused-vars
+  const ReduxData = useSelector((state) => state.product.data);
 
   useEffect(() => {
     // setLoading(true)
     axios.get(url).then((res) => {
       // setLoading(false)
       setData(res?.data);
+      dispatch(storeData(res?.data));
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
+  console.log(ReduxData,"from product");
   return (
-    <Container maxWidth="lg">
+    <>
       <Typography
         variant="h4"
         color="initial"
-        sx={{ marginTop: "20px", fontWeight: "bold" }}
+        sx={{ marginTop: "50px", marginBottom: "50px", fontWeight: "bold" }}
       >
-        Popular Products
+        <Typography
+          variant=""
+          color="initial"
+          sx={{
+            padding: "5px",
+            border: "1px solid #1976d2",
+
+            borderRadius: "5px",
+          }}
+        >
+          Popular Products
+        </Typography>
       </Typography>
       <Grid container spacing={5}>
         {data.map((product) => {
@@ -37,6 +54,9 @@ const Products = () => {
               <Card
                 elevation={5}
                 sx={{ maxWidth: "100%", borderRadius: "9px", height: "100%" }}
+                onClick={() => {
+                  navigate(`/product/${product.id}`);
+                }}
               >
                 <CardActionArea>
                   <CardMedia
@@ -50,13 +70,21 @@ const Products = () => {
                     <Typography gutterBottom variant="h5" component="div">
                       {product.category}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary" sx={{marginBottom:"5px"}}>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      sx={{ marginBottom: "5px" }}
+                    >
                       {product.price}$
                     </Typography>
-                    <Button size="small" color="primary" variant="contained"
-                    onClick={()=>{
-                      navigate(`/product/${product.id}`)
-                    }}>
+                    <Button
+                      size="small"
+                      color="primary"
+                      variant="contained"
+                      onClick={() => {
+                        navigate(`/product/${product.id}`);
+                      }}
+                    >
                       Details
                     </Button>
                   </CardContent>
@@ -66,7 +94,7 @@ const Products = () => {
           );
         })}
       </Grid>
-    </Container>
+    </>
   );
 };
 

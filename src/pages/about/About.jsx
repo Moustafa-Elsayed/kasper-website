@@ -21,9 +21,11 @@ const About = () => {
           <Typography
             variant="h2"
             color="initial"
-            sx={{ marginBottom: "20px",fontSize:{xs:"2.5rem",sm:"3rem"},fontWeight:"bold" }}
+            sx={{ marginBottom: "30px",fontSize:{xs:"2.5rem",sm:"3rem"},fontWeight:"bold" }}
           >
-            About us
+            <Typography variant="" color="initial"
+            sx={{border:"1px solid #1976d2",padding:"9px",borderRadius:"5px"}}>  About us</Typography>
+          
           </Typography>
 
           <Typography

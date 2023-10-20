@@ -12,9 +12,9 @@ const Error = () => {
     <Box sx={{ paddingTop: "150px", margin: "0 auto" }}>
       <SentimentVeryDissatisfiedIcon fontSize="large" mb="10px" />
       <Typography variant="h3" color="initial" mb="10px">
-      <Typography variant="h1" color="initial" mb="10px">
-        404
-      </Typography>
+        <Typography variant="h1" color="initial" mb="10px">
+          404
+        </Typography>
         <Typography variant="" color="red">
           Oops!
         </Typography>

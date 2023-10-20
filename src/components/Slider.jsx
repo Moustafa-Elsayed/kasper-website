@@ -1,6 +1,12 @@
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
@@ -17,7 +23,11 @@ const Slider = () => {
       spaceBetween={10}
       slidesPerView={1}
       centeredSlides={true}
-      modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
+      autoplay={{
+        delay: 2000,
+        disableOnInteraction: false,
+      }}
+      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade]}
       effect="fade"
       navigation
       pagination={{ clickable: true }}

@@ -7,8 +7,13 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { Button, CardActionArea } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ProDetails = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   const navigate = useNavigate();
   const url = "https://fakestoreapi.com/products";
   const [data, setData] = useState({});
@@ -32,6 +37,7 @@ const ProDetails = () => {
           margin: "130px auto 0",
           position: "relative",
         }}
+        data-aos="fade-down"
       >
         <Button
           onClick={() => {
@@ -65,7 +71,11 @@ const ProDetails = () => {
             <Typography gutterBottom variant="body1">
               {data.description}
             </Typography>
-            <Typography variant="body2" color="primary" sx={{marginBottom:"10px"}} >
+            <Typography
+              variant="body2"
+              color="primary"
+              sx={{ marginBottom: "10px" }}
+            >
               {data.price}$
             </Typography>
             <Button variant="outlined" disabled>

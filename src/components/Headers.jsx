@@ -44,53 +44,55 @@ const Head = () => {
                     backgroundColor: "transparent",
                   },
                   color: location.pathname === "/" ? "black" : null,
+                  borderBottom:
+                    location.pathname === "/" ? "1px solid black" : null,
+                }}
+                onClick={() => {
+                  navigate("/");
                 }}
               >
-                <ListItemText
-                  primary="Home"
-                  onClick={() => {
-                    navigate("/");
-                  }}
-                />
+                <ListItemText primary="Home" />
               </ListItemButton>
               <ListItemButton
                 sx={{
                   "&:hover": { color: "black", backgroundColor: "transparent" },
                   color: location.pathname === "/about" ? "black" : null,
+                  borderBottom:
+                    location.pathname === "/about" ? "1px solid black" : null,
+                }}
+                onClick={() => {
+                  navigate("/about");
                 }}
               >
-                <ListItemText
-                  primary="About"
-                  onClick={() => {
-                    navigate("/about");
-                  }}
-                />
+                <ListItemText primary="About" />
               </ListItemButton>
               <ListItemButton
                 sx={{
                   "&:hover": { color: "black", backgroundColor: "transparent" },
                   color: location.pathname === "/contact" ? "black" : null,
+                  borderBottom:
+                    location.pathname === "/contact" ? "1px solid black" : null,
+                }}
+                onClick={() => {
+                  navigate("/contact");
                 }}
               >
-                <ListItemText
-                  primary="Contact"
-                  onClick={() => {
-                    navigate("/contact");
-                  }}
-                />
+                <ListItemText primary="Contact" />
               </ListItemButton>
 
               <Button
                 sx={{
                   "&:hover": { color: "black", backgroundColor: "transparent" },
                   color: location.pathname === "/sign" ? "black" : null,
+                  borderBottom:
+                    location.pathname === "/sign" ? "1px solid black" : null,
+                }}
+                onClick={() => {
+                  navigate("/sign");
                 }}
                 startIcon={<LoginIcon />}
                 variant="outlined"
                 color="inherit"
-                onClick={() => {
-                  navigate("/sign");
-                }}
               >
                 Sign-In
               </Button>
@@ -150,16 +152,13 @@ const Head = () => {
               mb: 1,
               "&:hover": { backgroundColor: "#1976d2" },
             }}
+            onClick={() => {
+              navigate("/");
+              setClose("permanent");
+              setOpen("none");
+            }}
           >
-            <ListItemText
-              className="drawer-links"
-              primary="Home"
-              onClick={() => {
-                navigate("/");
-                setClose("permanent");
-                setOpen("none");
-              }}
-            />
+            <ListItemText className="drawer-links" primary="Home" />
           </ListItemButton>
 
           <ListItemButton
@@ -168,15 +167,13 @@ const Head = () => {
               mb: 1,
               "&:hover": { backgroundColor: "#1976d2" },
             }}
+            onClick={() => {
+              navigate("/about");
+              setClose("permanent");
+              setOpen("none");
+            }}
           >
-            <ListItemText
-              primary="About"
-              onClick={() => {
-                navigate("/about");
-                setClose("permanent");
-                setOpen("none");
-              }}
-            />
+            <ListItemText primary="About" />
           </ListItemButton>
           <ListItemButton
             sx={{
@@ -184,15 +181,13 @@ const Head = () => {
               mb: 1,
               "&:hover": { backgroundColor: "#1976d2" },
             }}
+            onClick={() => {
+              navigate("/contact");
+              setClose("permanent");
+              setOpen("none");
+            }}
           >
-            <ListItemText
-              primary="Contact"
-              onClick={() => {
-                navigate("/contact");
-                setClose("permanent");
-                setOpen("none");
-              }}
-            />
+            <ListItemText primary="Contact" />
           </ListItemButton>
 
           <Button
