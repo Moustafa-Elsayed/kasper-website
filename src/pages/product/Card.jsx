@@ -12,6 +12,7 @@ const Card = () => {
   console.log(ReduxData, "from card");
   return (
     <Swiper
+    className="swiper-card"
       spaceBetween={30}
       slidesPerView={1}
       centeredSlides={true}
@@ -24,7 +25,7 @@ const Card = () => {
       }}
       navigation={true}
       modules={[Autoplay, Pagination, Navigation]}
-      className="mySwiper"
+    
       scrollbar={{ draggable: true,hide:"false" }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}

@@ -1,16 +1,15 @@
 import Typography from "@mui/material/Typography";
-
-// import Grid from "@mui/material/Grid";
-// import AcUnitIcon from "@mui/icons-material/AcUnit";
-// import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-// import AddAlertIcon from "@mui/icons-material/AddAlert";
-// import AddToHomeScreenIcon from "@mui/icons-material/AddToHomeScreen";
-
+import Grid from "@mui/material/Grid";
+import AcUnitIcon from "@mui/icons-material/AcUnit";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import AddAlertIcon from "@mui/icons-material/AddAlert";
+import AddToHomeScreenIcon from "@mui/icons-material/AddToHomeScreen";
+import "./services.css";
 const Services = () => {
   return (
     <>
       <Typography
-        variant="h3"
+        variant="h2"
         color="initial"
         sx={{ marginTop: "50px", marginBottom: "50px", fontWeight: "bold" }}
       >
@@ -21,12 +20,14 @@ const Services = () => {
             border: "1px solid #1976d2",
             padding: "9px",
             borderRadius: "5px",
+            fontSize: { xs: "20px", sm: "px" },
+            fontWeight: "bold",
           }}
         >
           SERVICES
         </Typography>
         <Typography
-          variant="h6"
+          variant="body1"
           component="p"
           color="initial"
           sx={{ marginTop: "20px " }}
@@ -37,14 +38,19 @@ const Services = () => {
         </Typography>
       </Typography>
 
-      {/* <Grid container spacing={5}>
+      <Grid container spacing={0}>
         <Grid
+          item
           xs={12}
           md={6}
-          items
           sx={{ marginBottom: "10px", marginTop: "10px" }}
         >
-          <Typography variant="h5" component="h2" sx={{ color: "blue" }}>
+          <Typography
+            className="content-box"
+            variant="h5"
+            component="h2"
+            sx={{ color: "blue", marginBottom: "10px" }}
+          >
             <AcUnitIcon /> Vorem amet intuitive
           </Typography>
           <Typography variant="body1" component="p" color="initial">
@@ -56,10 +62,15 @@ const Services = () => {
         <Grid
           xs={12}
           md={6}
-          items
+          item
           sx={{ marginBottom: "10px", marginTop: "10px" }}
         >
-          <Typography variant="h5" component="h2" sx={{ color: "blue" }}>
+          <Typography
+            variant="h5"
+            className="content-box"
+            component="h2"
+            sx={{ color: "blue", marginBottom: "10px" }}
+          >
             <AccountCircleIcon /> Vorem amet intuitive
           </Typography>
           <Typography variant="body1" component="p" color="initial">
@@ -69,12 +80,17 @@ const Services = () => {
           </Typography>
         </Grid>
         <Grid
+          item
           xs={12}
           md={6}
-          items
           sx={{ marginBottom: "10px", marginTop: "10px" }}
         >
-          <Typography variant="h5" component="h2" sx={{ color: "blue" }}>
+          <Typography
+            variant="h5"
+            className="content-box"
+            component="h2"
+            sx={{ color: "blue", marginBottom: "10px" }}
+          >
             <AddAlertIcon /> Vorem amet intuitive
           </Typography>
           <Typography variant="body1" component="p" color="initial">
@@ -84,12 +100,16 @@ const Services = () => {
           </Typography>
         </Grid>
         <Grid
+          item
           xs={12}
           md={6}
-          items
           sx={{ marginBottom: "10px", marginTop: "10px" }}
         >
-          <Typography variant="h5" sx={{ color: "blue" }}>
+          <Typography
+            variant="h5"
+            className="content-box"
+            sx={{ color: "blue", marginBottom: "10px" }}
+          >
             <AddToHomeScreenIcon /> Vorem amet intuitive
           </Typography>
           <Typography variant="body1" color="initial">
@@ -98,13 +118,13 @@ const Services = () => {
             Curabitur aliquet quam.
           </Typography>
         </Grid>
-      </Grid> */}
-      <Typography variant="body1" color="initial">
+      </Grid>
+      {/* <Typography variant="body2" color="initial">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum
         debitis hic eum consectetur culpa atque mollitia quisquam nobis suscipit
         nostrum accusamus sint vero dolorem officiis doloribus, voluptates
         minima, velit incidunt?
-      </Typography>
+      </Typography> */}
     </>
   );
 };

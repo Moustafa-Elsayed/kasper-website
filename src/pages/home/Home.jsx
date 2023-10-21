@@ -11,7 +11,7 @@ const Home = () => {
       <Slider />
       <Container maxWidth="lg">
         <About />
-      <Card />
+        <Card />
         <Products />
         <Services />
       </Container>

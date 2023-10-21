@@ -1,0 +1,7 @@
+@media(max-width:989px){
+  .content-box{
+    display: flex ;
+    align-items: center;
+flex-direction: column;
+  }
+}

@@ -1,9 +1,18 @@
-.swiper {
-  width: 100%;
+.swiper-card {
+  width: 50%;
   height: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
 
+}
+@media(max-width:786px){
+  .swiper-card {
+    width: 80%;
+    height: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  
+  }
 }
 
 .swiper-slide {
