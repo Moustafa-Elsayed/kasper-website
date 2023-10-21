@@ -53,7 +53,7 @@ const Services = () => {
           >
             <AcUnitIcon /> Vorem amet intuitive
           </Typography>
-          <Typography variant="body1" component="p" color="initial">
+          <Typography variant="body1" component="p" color="initial" sx={{width:"80%",margin:"0 auto"}}>
             Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
             Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
             Curabitur aliquet quam.
@@ -73,7 +73,7 @@ const Services = () => {
           >
             <AccountCircleIcon /> Vorem amet intuitive
           </Typography>
-          <Typography variant="body1" component="p" color="initial">
+          <Typography variant="body1" component="p" color="initial" sx={{width:"80%",margin:"0 auto"}}>
             Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
             Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
             Curabitur aliquet quam.
@@ -93,7 +93,7 @@ const Services = () => {
           >
             <AddAlertIcon /> Vorem amet intuitive
           </Typography>
-          <Typography variant="body1" component="p" color="initial">
+          <Typography variant="body1" component="p" color="initial" sx={{width:"80%",margin:"0 auto"}}>
             Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
             Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
             Curabitur aliquet quam.
@@ -112,7 +112,7 @@ const Services = () => {
           >
             <AddToHomeScreenIcon /> Vorem amet intuitive
           </Typography>
-          <Typography variant="body1" color="initial">
+          <Typography variant="body1" color="initial" sx={{width:"80%",margin:"0 auto"}}>
             Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
             Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
             Curabitur aliquet quam.
