@@ -1,0 +1,56 @@
+.pricing{
+width: 80% ;
+margin: 0 auto;
+background-color: #b5aeae26;
+border-radius: 10px
+;}
+.plan-content{
+  padding-top: 5px;
+  border-bottom: 1px solid blue;
+}
+.plan-content h3{
+  font-size: 20px;
+}
+.pricing span{
+  font-size: 50px;
+  position: relative;
+
+}
+.pricing span::before{
+  content: "$";
+  position: absolute;
+  bottom: 41px;
+  right: 55px;
+  font-size: 38px;
+  color: #0000004f;
+}
+
+
+.pricing span::after{
+  content: "/mo";
+  position: absolute;
+  font-size: 30px;
+  bottom: 0;
+
+}
+ ul{
+  list-style: none;
+  padding: 0;
+
+}
+ul li{
+  margin-bottom: 30px;
+  width: 100%;
+  position: relative;
+  
+}
+ul li:not(:last-child)::after{
+  content: "";
+  position: absolute;
+height: 1px;
+width: 120px;
+background-color: blue;
+left: 50%;
+transform: translateX(-50%);
+bottom: -8px;
+}

@@ -4,6 +4,7 @@ import About from "../about/About";
 import Products from "../product/Products";
 import Services from "../services/Services";
 import Card from "../product/Card";
+import Pricing from "../pricing/Pricing";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         <Card />
         <Products />
         <Services />
+        <Pricing />
       </Container>
     </>
   );
