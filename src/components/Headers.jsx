@@ -15,9 +15,16 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
 import "./Header.css";
-
+import { useTranslation } from "react-i18next";
 // eslint-disable-next-line react/prop-types
 const Head = () => {
+  const { t, i18n } = useTranslation();
+  const changeEn = () => {
+    i18n.changeLanguage("en");
+  };
+  const changeAr = () => {
+    i18n.changeLanguage("ar");
+  };
   const [open, setOpen] = useState("none");
   const [close, setClose] = useState("permanent");
   const navigate = useNavigate();
@@ -51,7 +58,7 @@ const Head = () => {
                   navigate("/");
                 }}
               >
-                <ListItemText primary="Home" />
+                <ListItemText primary={t("Home")} />
               </ListItemButton>
               <ListItemButton
                 sx={{
@@ -95,6 +102,12 @@ const Head = () => {
                 color="inherit"
               >
                 Sign-In
+              </Button>
+              <Button variant="outlined" color="inherit" onClick={changeAr}>
+                Arabic
+              </Button>
+              <Button variant="outlined" color="inherit" onClick={changeEn}>
+                English
               </Button>
             </Box>
           </Box>
@@ -158,7 +171,7 @@ const Head = () => {
               setOpen("none");
             }}
           >
-            <ListItemText className="drawer-links" primary="Home" />
+            <ListItemText className="drawer-links" primary={t("Home")}  />
           </ListItemButton>
 
           <ListItemButton
