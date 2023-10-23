@@ -106,7 +106,7 @@ const Head = () => {
               >
                 {t("Sign-In")}
               </Button>
-              <Button variant="outlined" color="inherit" onClick={changeAr}>
+              <Button variant="outlined" color="inherit" onClick={changeAr} >
                 Arabic
               </Button>
               <Button variant="outlined" color="inherit" onClick={changeEn}>
@@ -220,6 +220,12 @@ const Head = () => {
           >
             {t("Sign-In")}
           </Button>
+          <Button variant="outlined" color="inherit" onClick={changeAr}>
+                Arabic
+              </Button>
+              <Button variant="outlined" color="inherit" onClick={changeEn}>
+                English
+              </Button>
         </Box>
       </Drawer>
     </>
