@@ -71,7 +71,10 @@ const Head = () => {
                   navigate("/about");
                 }}
               >
-                <ListItemText primary="About" />
+                <ListItemText primary={t("About")}
+                
+                
+               />
               </ListItemButton>
               <ListItemButton
                 sx={{
@@ -84,7 +87,7 @@ const Head = () => {
                   navigate("/contact");
                 }}
               >
-                <ListItemText primary="Contact" />
+                <ListItemText primary={t("Contact")} />
               </ListItemButton>
 
               <Button
@@ -101,7 +104,7 @@ const Head = () => {
                 variant="outlined"
                 color="inherit"
               >
-                Sign-In
+                {t("Sign-In")}
               </Button>
               <Button variant="outlined" color="inherit" onClick={changeAr}>
                 Arabic
@@ -186,7 +189,7 @@ const Head = () => {
               setOpen("none");
             }}
           >
-            <ListItemText primary="About" />
+            <ListItemText primary={t("About")} />
           </ListItemButton>
           <ListItemButton
             sx={{
@@ -200,7 +203,7 @@ const Head = () => {
               setOpen("none");
             }}
           >
-            <ListItemText primary="Contact" />
+            <ListItemText primary={t("Contact")} />
           </ListItemButton>
 
           <Button
@@ -215,7 +218,7 @@ const Head = () => {
               setOpen("none");
             }}
           >
-            Sign-Up
+            {t("Sign-In")}
           </Button>
         </Box>
       </Drawer>

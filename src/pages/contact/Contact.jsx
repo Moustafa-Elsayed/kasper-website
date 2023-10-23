@@ -7,8 +7,11 @@ import Button from "@mui/material/Button";
 import { useFormik } from "formik";
 import { basicShema } from "../../components/Schemas";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   const onSubmit = () => {
     console.log("submitted");
     postData();
@@ -47,7 +50,7 @@ const Contact = () => {
   return (
     <div className="contact" style={{ paddingTop: "90px" }}>
       <Typography gutterBottom variant="h3" align="center">
-        Contact
+        {t("Contact")}
       </Typography>
       <Card
         sx={{
@@ -63,12 +66,12 @@ const Contact = () => {
               <Grid xs={12} sm={6} item>
                 <TextField
                   value={values.firstName}
-                  name="firstName"
-                  id="firstName"
+                  name={t("firstName")}
+                  id={t("firstName")}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  placeholder="Enter First Name"
-                  label="First Name"
+                  placeholder={t("Enter First Name")}
+                  label={t("First Name")}
                   variant="outlined"
                   fullWidth
                   required
@@ -79,11 +82,11 @@ const Contact = () => {
 
               <Grid xs={12} sm={6} item>
                 <TextField
-                  name="lastName"
-                  id="lastName"
+                  name={t("lastName")}
+                  id={t("lastName")}
                   value={values.lastName}
-                  placeholder="Enter Last Name"
-                  label="Last Name"
+                  placeholder={t("Enter Last Name")}
+                  label={t("Last Name")}
                   variant="outlined"
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -96,12 +99,12 @@ const Contact = () => {
 
               <Grid xs={12} item>
                 <TextField
-                  name="email"
-                  id="email"
-                  type="email"
+                  name={t("email")}
+                  id={t("email")}
+                  type={t("email")}
                   value={values.email}
-                  placeholder="Enter Your Email"
-                  label="E-mail"
+                  placeholder={t("Enter Your Email")}
+                  label={t("E-mail")}
                   variant="outlined"
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -113,13 +116,13 @@ const Contact = () => {
               </Grid>
               <Grid xs={12} item>
                 <TextField
-                  name="phone"
-                  id="phone"
-                  placeholder="Enter Your Phone"
+                  name={t("phone")}
+                  id={t("phone")}
+                  placeholder={t("Enter Your Phone")}
                   value={values.phone}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  label="phone"
+                  label={t("phone")}
                   variant="outlined"
                   fullWidth
                   required
@@ -130,11 +133,11 @@ const Contact = () => {
 
               <Grid xs={12} item>
                 <TextField
-                  name="message"
-                  id="message"
-                  placeholder="Enter Your Message"
+                  name={t("message")}
+                  id={t("message")}
+                  placeholder={t("Enter Your Message")}
                   value={values.message}
-                  label="Message"
+                  label={t("Message")}
                   variant="outlined"
                   fullWidth
                   onChange={handleChange}
@@ -153,7 +156,7 @@ const Contact = () => {
                   color="primary"
                   fullWidth
                 >
-                  Submit
+                  {t("Submit")}
                 </Button>
               </Grid>
             </Grid>

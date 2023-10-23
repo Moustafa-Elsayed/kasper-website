@@ -7,8 +7,11 @@ import Button from "@mui/material/Button";
 import { useFormik } from "formik";
 import { logSchema } from "../../components/Schemas";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 const Newform = () => {
+  const { t } = useTranslation();
+
   const onSubmit = () => {
     console.log("submitted");
     postData();
@@ -45,7 +48,7 @@ const Newform = () => {
   return (
     <div className="contact" style={{ paddingTop: "90px" }}>
       <Typography gutterBottom variant="h3" align="center">
-        Sign-Up
+        {t("Sign-In")}
       </Typography>
 
       <Card
@@ -61,15 +64,15 @@ const Newform = () => {
             <Grid container spacing={1}>
               <Grid xs={12} item>
                 <TextField
-                  id="username"
-                  name="username"
+                  id={t("username")}
+                  name={t("username")}
                   value={values.username}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   error={touched.username && Boolean(errors.username)}
                   helperText={touched.username && errors.username}
-                  placeholder="Enter User Name"
-                  label="User Name"
+                  placeholder={t("Enter User Name")}
+                  label={t("User Name")}
                   variant="outlined"
                   fullWidth
                   required
@@ -78,16 +81,16 @@ const Newform = () => {
 
               <Grid xs={12} item>
                 <TextField
-                  id="email"
-                  name="email"
-                  type="Email"
+                  id={t("email")}
+                  name={t("email")}
+                  type={t("Email")}
                   value={values.email}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   error={touched.email && Boolean(errors.email)}
                   helperText={touched.email && errors.email}
-                  placeholder="Enter Your Email"
-                  label="E-mail"
+                  placeholder={t("Enter Your Email")}
+                  label={t("E-mail")}
                   variant="outlined"
                   fullWidth
                   required
@@ -95,16 +98,16 @@ const Newform = () => {
               </Grid>
               <Grid xs={12} item>
                 <TextField
-                  id="password"
-                  name="password"
-                  type="password"
+                  id={t("password")}
+                  name={t("password")}
+                  type={t("password")}
                   value={values.password}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   error={touched.password && Boolean(errors.password)}
                   helperText={touched.password && errors.password}
-                  placeholder="Enter Your Password"
-                  label="Password"
+                  placeholder={t("Enter Your Password")}
+                  label={t("Password")}
                   variant="outlined"
                   fullWidth
                   required
@@ -113,16 +116,16 @@ const Newform = () => {
 
               <Grid xs={12} item>
                 <TextField
-                  id="cpassword"
-                  name="cpassword"
-                  type="password"
+                  id={t("cpassword")}
+                  name={t("cpassword")}
+                  type={t("password")}
                   value={values.cpassword}
                   onChange={handleChange}
                   onBlur={handleBlur}
                   error={touched.cpassword && Boolean(errors.cpassword)}
                   helperText={touched.cpassword && errors.cpassword}
-                  placeholder="confirm Your Password"
-                  label="Confirm Password"
+                  placeholder={t("confirm Your Password")}
+                  label={t("Confirm Password")}
                   variant="outlined"
                   fullWidth
                   required
@@ -135,7 +138,7 @@ const Newform = () => {
                   color="primary"
                   fullWidth
                 >
-                  Submit
+                  {t("Submit")}
                 </Button>
               </Grid>
             </Grid>

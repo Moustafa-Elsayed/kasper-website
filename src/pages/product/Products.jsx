@@ -9,13 +9,17 @@ import { Button, CardActionArea } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { storeData } from "../../redux/productReducer";
+import { useTranslation } from "react-i18next";
 const Products = () => {
+  const { t } = useTranslation();
+
   const navigate = useNavigate();
   const url = "https://fakestoreapi.com/products";
   const [data, setData] = useState([]);
   const dispatch = useDispatch();
   // eslint-disable-next-line no-unused-vars
   const ReduxData = useSelector((state) => state.product.data);
+
 
   useEffect(() => {
     // setLoading(true)
@@ -44,7 +48,7 @@ const Products = () => {
             borderRadius: "5px",
           }}
         >
-          Popular Products
+          {t("Popular Products")}
         </Typography>
       </Typography>
       <Grid container spacing={5}>
@@ -85,7 +89,7 @@ const Products = () => {
                         navigate(`/product/${product.id}`);
                       }}
                     >
-                      Details
+                      {t("Details")}
                     </Button>
                   </CardContent>
                 </CardActionArea>

@@ -15,43 +15,31 @@ const Slider = () => {
   }, []);
   return (
     <Swiper
-    spaceBetween={30}
-    slidesPerView={1}
-    centeredSlides={true}
-    autoplay={{
-      delay: 2500,
-      disableOnInteraction: false,
-    }}
-    pagination={{
-      clickable: true,
-    }}
-    navigation={true}
-    modules={[Autoplay, Pagination, Navigation]}
-    className="mySwiper"
-    scrollbar={{ draggable: true }}
-    onSwiper={(swiper) => console.log(swiper)}
-    onSlideChange={() => console.log("slide change")}
+      spaceBetween={30}
+      slidesPerView={1}
+      centeredSlides={true}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      pagination={{
+        clickable: true,
+      }}
+      navigation={true}
+      modules={[Autoplay, Pagination, Navigation]}
+      className="mySwiper"
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log("slide change")}
     >
       <SwiperSlide className="swiper-slider">
-        <img
-          src=".\img\carosul1.jpg"
-          alt=""
-          style={{ width: "100%", maxHeight: "100vh" }}
-        />
+        <img src=".\img\carosul1.jpg" alt="" />
       </SwiperSlide>
       <SwiperSlide>
-        <img
-          src=".\img\carosul2jpg.jpg"
-          alt=""
-          style={{ width: "100%", maxHeight: "100vh" }}
-        />
+        <img src=".\img\carosul2jpg.jpg" alt="" />
       </SwiperSlide>
       <SwiperSlide>
-        <img
-          src=".\img\carusol3.jpg"
-          alt=""
-          style={{ width: "100%", maxHeight: "100vh" }}
-        />
+        <img src=".\img\carusol3.jpg" alt="" />
       </SwiperSlide>
     </Swiper>
   );

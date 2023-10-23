@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import { Box, Typography, Grid, Container } from "@mui/material";
 import CoffeeIcon from "@mui/icons-material/Coffee";
 import DriveFileMoveIcon from "@mui/icons-material/DriveFileMove";
@@ -7,8 +8,9 @@ import "./About.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-
+import { useTranslation } from 'react-i18next';
 const About = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
@@ -21,22 +23,33 @@ const About = () => {
           <Typography
             variant="h2"
             color="initial"
-            sx={{ marginBottom: "30px",fontSize:{xs:"2.5rem",sm:"3rem"},fontWeight:"bold" }}
+            sx={{
+              marginBottom: "30px",
+              fontSize: { xs: "2.5rem", sm: "3rem" },
+              fontWeight: "bold",
+            }}
           >
-            <Typography variant="" color="initial"
-            sx={{border:"1px solid #1976d2",padding:"9px",borderRadius:"5px"}}>  About us</Typography>
-          
+            <Typography
+              variant=""
+              color="initial"
+              sx={{
+                border: "1px solid #1976d2",
+                padding: "9px",
+                borderRadius: "5px",
+              }}
+            >
+              {t("About us")}
+            </Typography>
           </Typography>
 
           <Typography
             variant="body1"
             color="initial"
             component="p"
-            sx={{ marginBottom: "50px",fontSize:{xs:"14px",sm:"16px"} }}
-            
+            sx={{ marginBottom: "50px", fontSize: { xs: "14px", sm: "16px" } }}
           >
-            Curabitur arcu erat, accumsan id imperdiet et, <br /> porttitor at
-            sem. Mauris blandit aliquet elit, eget tincidunt.
+            {t("Curabitur arcu erat, accumsan id imperdiet et,")} <br /> porttitor at
+            sem. Mauris blandit aliquet elit, eget tincidunt
           </Typography>
           <Box sx={{ display: { xs: "none", md: "block" } }}>
             <img src=".\img\about.png" alt="" data-aos="fade-right" />
@@ -54,7 +67,7 @@ const About = () => {
                 1.236
               </Typography>
               <Typography component="p" color="initial" sx={{ mb: "10px" }}>
-                Coffee Drinks
+                {t("Coffee Drinks")}
               </Typography>
             </Grid>
             <Grid xs={12} md={3} l={3} item data-aos="flip-left">
@@ -67,7 +80,7 @@ const About = () => {
                 256
               </Typography>
               <Typography component="p" color="initial" sx={{ mb: "10px" }}>
-                Completed Projects
+                {t("Completed Projects")}
               </Typography>
             </Grid>
             <Grid xs={12} md={3} l={3} item data-aos="flip-left">
@@ -80,7 +93,7 @@ const About = () => {
                 1,743
               </Typography>
               <Typography component="p" color="initial" sx={{ mb: "10px" }}>
-                Mail Sent
+                {t("Mail Sent")}
               </Typography>
             </Grid>
             <Grid xs={12} md={3} l={3} item data-aos="flip-left">
@@ -93,7 +106,7 @@ const About = () => {
                 17
               </Typography>
               <Typography component="p" color="initial" sx={{ mb: "10px" }}>
-                Awards Received
+                {t("Awards Received")}
               </Typography>
             </Grid>
           </Grid>

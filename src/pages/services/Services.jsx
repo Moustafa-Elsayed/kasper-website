@@ -4,8 +4,11 @@ import AcUnitIcon from "@mui/icons-material/AcUnit";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import AddAlertIcon from "@mui/icons-material/AddAlert";
 import AddToHomeScreenIcon from "@mui/icons-material/AddToHomeScreen";
+import { useTranslation } from 'react-i18next';
 import "./services.css";
 const Services = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Typography
@@ -24,7 +27,7 @@ const Services = () => {
             fontWeight: "bold",
           }}
         >
-          SERVICES
+          {t("SERVICES")}
         </Typography>
         <Typography
           variant="body1"
@@ -32,11 +35,13 @@ const Services = () => {
           color="initial"
           sx={{ marginTop: "20px " }}
         >
-          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+          {t("Curabitur arcu erat,")} {t("accumsan id imperdiet et,")} {t("porttitor at sem.")}
           <br />
-          Mauris blandit aliquet elit, eget tincidunt.
+          {t("Mauris blandit aliquet elit, eget tincidunt.")}
         </Typography>
       </Typography>
+
+      
 
       <Grid container spacing={0}>
         <Grid
@@ -51,12 +56,11 @@ const Services = () => {
             component="h2"
             sx={{ color: "blue", marginBottom: "10px" }}
           >
-            <AcUnitIcon /> Vorem amet intuitive
+            <AcUnitIcon /> {t("Vorem amet intuitive")}
           </Typography>
           <Typography variant="body1" component="p" color="initial" sx={{width:"80%",margin:"0 auto"}}>
-            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
-            Curabitur aliquet quam.
+          {t("Curabitur arcu erat,")} {t("accumsan id imperdiet et,")} {t("porttitor at sem.")}
+      {t("Mauris blandit aliquet elit, eget tincidunt.")}
           </Typography>
         </Grid>
         <Grid
@@ -71,12 +75,11 @@ const Services = () => {
             component="h2"
             sx={{ color: "blue", marginBottom: "10px" }}
           >
-            <AccountCircleIcon /> Vorem amet intuitive
+            <AccountCircleIcon /> {t("Vorem amet intuitive")}
           </Typography>
           <Typography variant="body1" component="p" color="initial" sx={{width:"80%",margin:"0 auto"}}>
-            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
-            Curabitur aliquet quam.
+          {t("Curabitur arcu erat,")} {t("accumsan id imperdiet et,")} {t("porttitor at sem.")}  
+      {t("Mauris blandit aliquet elit, eget tincidunt.")}
           </Typography>
         </Grid>
         <Grid
@@ -91,12 +94,11 @@ const Services = () => {
             component="h2"
             sx={{ color: "blue", marginBottom: "10px" }}
           >
-            <AddAlertIcon /> Vorem amet intuitive
+            <AddAlertIcon /> {t("Vorem amet intuitive")}
           </Typography>
           <Typography variant="body1" component="p" color="initial" sx={{width:"80%",margin:"0 auto"}}>
-            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
-            Curabitur aliquet quam.
+          {t("Curabitur arcu erat,")} {t("accumsan id imperdiet et,")} {t("porttitor at sem.")}  
+      {t("Mauris blandit aliquet elit, eget tincidunt.")}
           </Typography>
         </Grid>
         <Grid
@@ -110,12 +112,11 @@ const Services = () => {
             className="content-box"
             sx={{ color: "blue", marginBottom: "10px" }}
           >
-            <AddToHomeScreenIcon /> Vorem amet intuitive
+            <AddToHomeScreenIcon /> {t("Vorem amet intuitive")}
           </Typography>
           <Typography variant="body1" color="initial" sx={{width:"80%",margin:"0 auto"}}>
-            Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
-            Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
-            Curabitur aliquet quam.
+          {t("Curabitur arcu erat,")} {t("accumsan id imperdiet et,")} {t("porttitor at sem.")}  
+      {t("Mauris blandit aliquet elit, eget tincidunt.")}
           </Typography>
         </Grid>
       </Grid>
