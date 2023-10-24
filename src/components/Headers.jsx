@@ -16,6 +16,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
 import "./Header.css";
 import { useTranslation } from "react-i18next";
+
 // eslint-disable-next-line react/prop-types
 const Head = () => {
   const { t, i18n } = useTranslation();
@@ -71,10 +72,7 @@ const Head = () => {
                   navigate("/about");
                 }}
               >
-                <ListItemText primary={t("About")}
-                
-                
-               />
+                <ListItemText primary={t("About")} />
               </ListItemButton>
               <ListItemButton
                 sx={{
@@ -106,7 +104,7 @@ const Head = () => {
               >
                 {t("Sign-In")}
               </Button>
-              <Button variant="outlined" color="inherit" onClick={changeAr} >
+              <Button variant="outlined" color="inherit" onClick={changeAr}>
                 Arabic
               </Button>
               <Button variant="outlined" color="inherit" onClick={changeEn}>
@@ -174,7 +172,7 @@ const Head = () => {
               setOpen("none");
             }}
           >
-            <ListItemText className="drawer-links" primary={t("Home")}  />
+            <ListItemText className="drawer-links" primary={t("Home")} />
           </ListItemButton>
 
           <ListItemButton
@@ -221,11 +219,11 @@ const Head = () => {
             {t("Sign-In")}
           </Button>
           <Button variant="outlined" color="inherit" onClick={changeAr}>
-                Arabic
-              </Button>
-              <Button variant="outlined" color="inherit" onClick={changeEn}>
-                English
-              </Button>
+            Arabic
+          </Button>
+          <Button variant="outlined" color="inherit" onClick={changeEn}>
+            English
+          </Button>
         </Box>
       </Drawer>
     </>

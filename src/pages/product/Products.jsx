@@ -72,7 +72,8 @@ const Products = () => {
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                      {product.category}
+                      {t(`${product.category}`)}
+                      
                     </Typography>
                     <Typography
                       variant="body2"

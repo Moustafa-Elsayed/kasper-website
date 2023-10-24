@@ -9,8 +9,11 @@ import { Button, CardActionArea } from "@mui/material";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 const ProDetails = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
@@ -53,7 +56,7 @@ const ProDetails = () => {
             zIndex: "222",
           }}
         >
-          Back
+          {t("Back")}
         </Button>
 
         <CardActionArea>
@@ -66,10 +69,12 @@ const ProDetails = () => {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              {data.category}
+              {t(`${data.category}`)}
+              
             </Typography>
             <Typography gutterBottom variant="body1">
-              {data.description}
+              {t(`${data.description}`)}
+              
             </Typography>
             <Typography
               variant="body2"
@@ -79,7 +84,7 @@ const ProDetails = () => {
               {data.price}$
             </Typography>
             <Button variant="outlined" disabled>
-              Buy Now
+              {t("Buy Now")}
             </Button>
           </CardContent>
         </CardActionArea>

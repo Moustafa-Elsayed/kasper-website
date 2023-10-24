@@ -15,6 +15,7 @@ const Contact = () => {
   const onSubmit = () => {
     console.log("submitted");
     postData();
+  
   };
   const { handleBlur, errors, touched, handleChange, values, handleSubmit } =
     useFormik({
@@ -101,7 +102,7 @@ const Contact = () => {
                 <TextField
                   name={t("email")}
                   id={t("email")}
-                  type={t("email")}
+                  type="email"
                   value={values.email}
                   placeholder={t("Enter Your Email")}
                   label={t("E-mail")}

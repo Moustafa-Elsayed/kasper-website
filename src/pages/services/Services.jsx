@@ -4,7 +4,7 @@ import AcUnitIcon from "@mui/icons-material/AcUnit";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import AddAlertIcon from "@mui/icons-material/AddAlert";
 import AddToHomeScreenIcon from "@mui/icons-material/AddToHomeScreen";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import "./services.css";
 const Services = () => {
   const { t } = useTranslation();
@@ -35,13 +35,12 @@ const Services = () => {
           color="initial"
           sx={{ marginTop: "20px " }}
         >
-          {t("Curabitur arcu erat,")} {t("accumsan id imperdiet et,")} {t("porttitor at sem.")}
+          {t("Curabitur arcu erat,")} {t("accumsan id imperdiet et,")}{" "}
+          {t("porttitor at sem.")}
           <br />
           {t("Mauris blandit aliquet elit, eget tincidunt.")}
         </Typography>
       </Typography>
-
-      
 
       <Grid container spacing={0}>
         <Grid
@@ -58,9 +57,15 @@ const Services = () => {
           >
             <AcUnitIcon /> {t("Vorem amet intuitive")}
           </Typography>
-          <Typography variant="body1" component="p" color="initial" sx={{width:"80%",margin:"0 auto"}}>
-          {t("Curabitur arcu erat,")} {t("accumsan id imperdiet et,")} {t("porttitor at sem.")}
-      {t("Mauris blandit aliquet elit, eget tincidunt.")}
+          <Typography
+            variant="body1"
+            component="p"
+            color="initial"
+            sx={{ width: "80%", margin: "0 auto" }}
+          >
+            {t("Curabitur arcu erat,")} {t("accumsan id imperdiet et,")}{" "}
+            {t("porttitor at sem.")}
+            {t("Mauris blandit aliquet elit, eget tincidunt.")}
           </Typography>
         </Grid>
         <Grid
@@ -77,9 +82,15 @@ const Services = () => {
           >
             <AccountCircleIcon /> {t("Vorem amet intuitive")}
           </Typography>
-          <Typography variant="body1" component="p" color="initial" sx={{width:"80%",margin:"0 auto"}}>
-          {t("Curabitur arcu erat,")} {t("accumsan id imperdiet et,")} {t("porttitor at sem.")}  
-      {t("Mauris blandit aliquet elit, eget tincidunt.")}
+          <Typography
+            variant="body1"
+            component="p"
+            color="initial"
+            sx={{ width: "80%", margin: "0 auto" }}
+          >
+            {t("Curabitur arcu erat,")} {t("accumsan id imperdiet et,")}{" "}
+            {t("porttitor at sem.")}
+            {t("Mauris blandit aliquet elit, eget tincidunt.")}
           </Typography>
         </Grid>
         <Grid
@@ -96,9 +107,15 @@ const Services = () => {
           >
             <AddAlertIcon /> {t("Vorem amet intuitive")}
           </Typography>
-          <Typography variant="body1" component="p" color="initial" sx={{width:"80%",margin:"0 auto"}}>
-          {t("Curabitur arcu erat,")} {t("accumsan id imperdiet et,")} {t("porttitor at sem.")}  
-      {t("Mauris blandit aliquet elit, eget tincidunt.")}
+          <Typography
+            variant="body1"
+            component="p"
+            color="initial"
+            sx={{ width: "80%", margin: "0 auto" }}
+          >
+            {t("Curabitur arcu erat,")} {t("accumsan id imperdiet et,")}{" "}
+            {t("porttitor at sem.")}
+            {t("Mauris blandit aliquet elit, eget tincidunt.")}
           </Typography>
         </Grid>
         <Grid
@@ -114,9 +131,14 @@ const Services = () => {
           >
             <AddToHomeScreenIcon /> {t("Vorem amet intuitive")}
           </Typography>
-          <Typography variant="body1" color="initial" sx={{width:"80%",margin:"0 auto"}}>
-          {t("Curabitur arcu erat,")} {t("accumsan id imperdiet et,")} {t("porttitor at sem.")}  
-      {t("Mauris blandit aliquet elit, eget tincidunt.")}
+          <Typography
+            variant="body1"
+            color="initial"
+            sx={{ width: "80%", margin: "0 auto" }}
+          >
+            {t("Curabitur arcu erat,")} {t("accumsan id imperdiet et,")}{" "}
+            {t("porttitor at sem.")}
+            {t("Mauris blandit aliquet elit, eget tincidunt.")}
           </Typography>
         </Grid>
       </Grid>
