@@ -8,9 +8,6 @@ import {
   AppBar,
   Toolbar,
   Typography,
-  ListItem,
-  ListItemIcon,
-  FormHelperText,
 } from "@mui/material";
 import LoginIcon from "@mui/icons-material/Login";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -20,10 +17,6 @@ import { useState } from "react";
 import "./Header.css";
 import { useTranslation } from "react-i18next";
 import LanguageIcon from "@mui/icons-material/Language";
-import { Collapse } from "@mui/material";
-import ExpandLessIcon from "@mui/icons-material/ExpandLess";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
@@ -35,14 +28,14 @@ const Head = () => {
     i18n.changeLanguage(lang);
     localStorage.setItem("lang", lang);
   };
+
+  const [open, setOpen] = useState("none");
+  // const [isCollapde, setisCollapde] = useState(false);
   const [age, setAge] = useState("");
 
   const handleChange = (event) => {
     setAge(event.target.value);
   };
-  const [open, setOpen] = useState("none");
-  // const [isCollapde, setisCollapde] = useState(false);
-
   const [close, setClose] = useState("permanent");
   const navigate = useNavigate();
   const location = useLocation();
@@ -120,28 +113,29 @@ const Head = () => {
               >
                 {t("Sign-In")}
               </Button>
-
-              <Box sx={{ minWidth: 10, minHeight: 10 }}>
-                <FormControl sx={{ m: 1, minWidth: 10, minHeight: 10 }}>
-                  <Select value={age} onChange={handleChange}>
-                    <MenuItem></MenuItem>
+              <Box>
+                <FormControl color="secondary" sx={{ m: 1, borderColor: "black" }} fullWidth={false} size="small">
+                  <Select value={age} onChange={handleChange} displayEmpty>
                     <MenuItem
                       onClick={() => {
                         handleChangeLng("ar");
                       }}
+                      value={10}
                     >
-                      Arabic
+                      Ar
                     </MenuItem>
                     <MenuItem
                       onClick={() => {
                         handleChangeLng("en");
                       }}
+                      value={20}
                     >
-                      English
+                      En
                     </MenuItem>
                   </Select>
                 </FormControl>
               </Box>
+
               {/* <Button
                 variant="outlined"
                 sx={{ color: "white", position: "relative" }}
@@ -320,6 +314,34 @@ const Head = () => {
           >
             {t("Sign-In")}
           </Button>
+          <Box sx={{ textAlign: "center" }}>
+            <FormControl color="secondary" sx={{ m: 1, borderColor: "black" }} fullWidth={false} size="small">
+              <Select
+                value={age}
+                onChange={handleChange}
+                displayEmpty
+                sx={{ margin: "0 auto" }}
+              >
+                <MenuItem
+                  onClick={() => {
+                    handleChangeLng("ar");
+                  }}
+                  value={10}
+                >
+                  Ar
+                </MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    handleChangeLng("en");
+                  }}
+                  value={20}
+                >
+                  En
+                </MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
+
           {/* <Button
             variant="outlined"
             sx={{
