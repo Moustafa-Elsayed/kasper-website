@@ -16,7 +16,6 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
 import "./Header.css";
 import { useTranslation } from "react-i18next";
-import LanguageIcon from "@mui/icons-material/Language";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
