@@ -33,18 +33,18 @@ border-radius: 10px
   bottom: 0;
 
 }
- ul{
+.pricing ul{
   list-style: none;
   padding: 0;
 
 }
-ul li{
+.pricing ul li{
   margin-bottom: 30px;
   width: 100%;
   position: relative;
   
 }
-ul li:not(:last-child)::after{
+.pricing ul li:not(:last-child)::after{
   content: "";
   position: absolute;
 height: 1px;

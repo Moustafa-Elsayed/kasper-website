@@ -65,7 +65,7 @@ const Newform = () => {
               <Grid xs={12} item>
                 <TextField
                   id={t("username")}
-                  name={t("username")}
+                  name="username"
                   value={values.username}
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -82,7 +82,7 @@ const Newform = () => {
               <Grid xs={12} item>
                 <TextField
                   id={t("email")}
-                  name={t("email")}
+                  name="email"
                   type={t("Email")}
                   value={values.email}
                   onChange={handleChange}
@@ -99,7 +99,7 @@ const Newform = () => {
               <Grid xs={12} item>
                 <TextField
                   id={t("password")}
-                  name={t("password")}
+                  name="password"
                   type={t("password")}
                   value={values.password}
                   onChange={handleChange}
@@ -117,7 +117,7 @@ const Newform = () => {
               <Grid xs={12} item>
                 <TextField
                   id={t("cpassword")}
-                  name={t("cpassword")}
+                  name="cpassword"
                   type={t("password")}
                   value={values.cpassword}
                   onChange={handleChange}

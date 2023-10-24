@@ -4,7 +4,6 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import HomeIcon from "@mui/icons-material/Home";
 import { useNavigate } from "react-router-dom";
-
 const Error = () => {
   const navigate = useNavigate();
 

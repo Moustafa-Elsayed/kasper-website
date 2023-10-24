@@ -67,7 +67,7 @@ const Contact = () => {
               <Grid xs={12} sm={6} item>
                 <TextField
                   value={values.firstName}
-                  name={t("firstName")}
+                  name="firstName"
                   id={t("firstName")}
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -83,7 +83,7 @@ const Contact = () => {
 
               <Grid xs={12} sm={6} item>
                 <TextField
-                  name={t("lastName")}
+                  name="lastName"
                   id={t("lastName")}
                   value={values.lastName}
                   placeholder={t("Enter Last Name")}
@@ -100,7 +100,7 @@ const Contact = () => {
 
               <Grid xs={12} item>
                 <TextField
-                  name={t("email")}
+                  name="email"
                   id={t("email")}
                   type="email"
                   value={values.email}
@@ -117,7 +117,7 @@ const Contact = () => {
               </Grid>
               <Grid xs={12} item>
                 <TextField
-                  name={t("phone")}
+                  name="phone"
                   id={t("phone")}
                   placeholder={t("Enter Your Phone")}
                   value={values.phone}
@@ -134,7 +134,7 @@ const Contact = () => {
 
               <Grid xs={12} item>
                 <TextField
-                  name={t("message")}
+                  name="message"
                   id={t("message")}
                   placeholder={t("Enter Your Message")}
                   value={values.message}

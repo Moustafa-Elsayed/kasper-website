@@ -8,6 +8,9 @@ import {
   AppBar,
   Toolbar,
   Typography,
+  ListItem,
+  ListItemIcon,
+  FormHelperText,
 } from "@mui/material";
 import LoginIcon from "@mui/icons-material/Login";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -16,17 +19,30 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
 import "./Header.css";
 import { useTranslation } from "react-i18next";
-
+import LanguageIcon from "@mui/icons-material/Language";
+import { Collapse } from "@mui/material";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 // eslint-disable-next-line react/prop-types
 const Head = () => {
   const { t, i18n } = useTranslation();
-  const changeEn = () => {
-    i18n.changeLanguage("en");
+
+  const handleChangeLng = (lang) => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem("lang", lang);
   };
-  const changeAr = () => {
-    i18n.changeLanguage("ar");
+  const [age, setAge] = useState("");
+
+  const handleChange = (event) => {
+    setAge(event.target.value);
   };
   const [open, setOpen] = useState("none");
+  // const [isCollapde, setisCollapde] = useState(false);
+
   const [close, setClose] = useState("permanent");
   const navigate = useNavigate();
   const location = useLocation();
@@ -104,12 +120,98 @@ const Head = () => {
               >
                 {t("Sign-In")}
               </Button>
-              <Button variant="outlined" color="inherit" onClick={changeAr}>
-                Arabic
+
+              <Box sx={{ minWidth: 10, minHeight: 10 }}>
+                <FormControl sx={{ m: 1, minWidth: 10, minHeight: 10 }}>
+                  <Select value={age} onChange={handleChange}>
+                    <MenuItem></MenuItem>
+                    <MenuItem
+                      onClick={() => {
+                        handleChangeLng("ar");
+                      }}
+                    >
+                      Arabic
+                    </MenuItem>
+                    <MenuItem
+                      onClick={() => {
+                        handleChangeLng("en");
+                      }}
+                    >
+                      English
+                    </MenuItem>
+                  </Select>
+                </FormControl>
+              </Box>
+              {/* <Button
+                variant="outlined"
+                sx={{ color: "white", position: "relative" }}
+              >
+                <LanguageIcon
+                  onClick={() => {
+                    setisCollapde(true);
+                  }}
+                />
               </Button>
-              <Button variant="outlined" color="inherit" onClick={changeEn}>
-                English
-              </Button>
+              {isCollapde ? (
+                <ExpandLessIcon
+                  sx={{ zIndex: "55" }}
+                  onClick={() => {
+                    setisCollapde(true);
+                  }}
+                />
+              ) : (
+                <ExpandMoreIcon
+                  sx={{ zIndex: "55" }}
+                  onClick={() => {
+                    setisCollapde(false);
+                  }}
+                />
+              )}
+              <Collapse
+                in={isCollapde}
+                timeout="auto"
+                unmountOnExit
+                sx={{
+                  cursor: "pointer",
+                  position: "absolute",
+                  right: "0",
+                  top: "60px",
+                  border: "1px solid red",
+                }}
+              >
+                <ListItem
+                  onClick={() => {
+                    setisCollapde(false);
+                  }}
+                >
+                  <ListItemButton>
+                    <ListItemText
+                      sx={{ color: "black" }}
+                      onClick={() => {
+                        handleChangeLng("ar");
+                      }}
+                      primary="Arabic"
+                    />
+                    <ListItemIcon />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem
+                  onClick={() => {
+                    setisCollapde(false);
+                  }}
+                >
+                  <ListItemButton>
+                    <ListItemText
+                      onClick={() => {
+                        handleChangeLng("en");
+                      }}
+                      sx={{ color: "black" }}
+                      primary="English"
+                    />
+                    <ListItemIcon />
+                  </ListItemButton>
+                </ListItem>
+              </Collapse> */}
             </Box>
           </Box>
 
@@ -218,12 +320,43 @@ const Head = () => {
           >
             {t("Sign-In")}
           </Button>
-          <Button variant="outlined" color="inherit" onClick={changeAr}>
-            Arabic
+          {/* <Button
+            variant="outlined"
+            sx={{
+              display: "flex",
+              justifyContent: "space-around",
+              alignItems: "center",
+            }}
+          >
+            <LanguageIcon
+              onClick={() => {
+                setisCollapde(true);
+              }}
+            />
+            {isCollapde ? <ExpandLessIcon /> : <ExpandMoreIcon />}
           </Button>
-          <Button variant="outlined" color="inherit" onClick={changeEn}>
-            English
-          </Button>
+
+          <Collapse
+            in={isCollapde}
+            timeout="auto"
+            unmountOnExit
+            sx={{
+              cursor: "pointer",
+            }}
+          >
+            <ListItem>
+              <ListItemButton>
+                <ListItemText onClick={changeAr} primary="Arabic" />
+                <ListItemIcon />
+              </ListItemButton>
+            </ListItem>
+            <ListItem>
+              <ListItemButton>
+                <ListItemText onClick={changeEn} primary="English" />
+                <ListItemIcon />
+              </ListItemButton>
+            </ListItem>
+          </Collapse> */}
         </Box>
       </Drawer>
     </>
