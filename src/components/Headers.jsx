@@ -42,7 +42,7 @@ const Head = () => {
     <>
       <AppBar position="fixed" color="primary">
         <Toolbar sx={{ justifyContent: "space-between" }}>
-          <Typography>
+          <Typography sx={{cursor:"pointer"}}>
             <img
               src=".\img\logo.png"
               onClick={() => {

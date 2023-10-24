@@ -55,7 +55,7 @@ const About = () => {
             <img src=".\img\about.png" alt="" data-aos="fade-right" />
           </Box>
         </Box>
-        <Box>
+        <Box className="about-sec">
           <Grid container spacing={0} bgcolor="#1976d2" padding="45px 0">
             <Grid xs={12} md={3} l={3} item data-aos="flip-left">
               <CoffeeIcon fontSize="large" sx={{ mb: "10px" }} />

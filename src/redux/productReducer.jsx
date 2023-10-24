@@ -1,4 +1,14 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+
+
+
+
+export const fetchData= createAsyncThunk("counterSlice/fetchData",async()=>{
+const res=await fetch("https://fakestoreapi.com/products")
+const data=res.json()
+return data
+})
+
 
 
 const initialState = {
@@ -13,6 +23,11 @@ export const counterSlice = createSlice({
       state.data = action.payload;
     },
   },
+  extraReducers:(builder)=>{
+builder.addCase(fetchData.fulfilled,(state,action)=>{
+  return action.payload
+})
+  }
 });
 
 export const { storeData } = counterSlice.actions;

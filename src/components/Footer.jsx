@@ -1,53 +1,24 @@
-import Grid from "@mui/material/Grid";
 import "./footer.css";
 import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
 const Footer = () => {
   return (
     <Box container marginBottom="20px" marginTop="60px" className="footer">
-      <Grid container spacing={2}>
-        <Grid xs={12} sm={12} md={3} lg={4} item>
-          <div>
-            <h3>COMPANY</h3>
-            <a href="">
-              <p>ABOUT US</p>
-            </a>
-            <a href="">
-              <p>BLOG</p>
-            </a>
-            <a href="">
-              <p>CAREERS</p>
-            </a>
+      <Grid container spacing={0}>
+        <Grid item xs={12} md={6}>
+          <div className="socail">
+            <h2>WE ARE SOCIAL</h2>
+            <FacebookIcon sx={{color:"blue",fontSize:"30px",padding:"10px"}}/>
+            <InstagramIcon sx={{color:"red",fontSize:"30px",padding:"10px"}}/>
+            <TwitterIcon  sx={{color:"black",fontSize:"30px",padding:"10px"}}/>
           </div>
         </Grid>
-        <Grid xs={12} sm={12} md={3} lg={4} item>
-          <div>
-            <h3>RESOURSES</h3>
-            <a href="">
-              <p>FAQ</p>
-            </a>
-            <a href="">
-              <p>SYSYTEMS</p>
-            </a>
-            <a href="">
-              <p>CAREERS</p>
-            </a>
-          </div>
-        </Grid>
-        <Grid xs={12} sm={12} md={3} lg={4} item>
-          <div>
-            <h3>SOCIAL</h3>
-            <a href="">
-              <FacebookIcon />
-            </a>
-            <a href="">
-              <YouTubeIcon />
-            </a>
-            <a href="">
-              <InstagramIcon />
-            </a>
+        <Grid item xs={12} md={6}>
+          <div className="copy">
+            <h2>© 2023 <span>Kasper</span> All Right Reserved</h2>
           </div>
         </Grid>
       </Grid>

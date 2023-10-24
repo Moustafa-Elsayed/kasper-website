@@ -1,13 +1,17 @@
 .footer{
   background-color: #1976d2;
+align-items: center;
+padding-top:20px ;
+padding-bottom:20px ;
 }
-.footer a{
-  text-decoration: none;
-}
+
 .footer h3{
   color: black;
   font-weight: bold;
 }
-.footer a p{
-  color: #0e0c0c;
+.footer .social{
+border-bottom: 1px solid black;
+}
+.footer .copy span{
+  color: #ec0b0b;
 }
