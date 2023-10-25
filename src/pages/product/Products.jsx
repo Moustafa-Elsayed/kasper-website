@@ -11,8 +11,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { storeData } from "../../redux/productReducer";
 import { useTranslation } from "react-i18next";
 const Products = () => {
-  const { t } = useTranslation();
+  // eslint-disable-next-line no-unused-vars
+  const [loading , setLoading] = useState(false);
 
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const url = "https://fakestoreapi.com/products";
   const [data, setData] = useState([]);
@@ -51,7 +53,11 @@ const Products = () => {
           {t("Popular Products")}
         </Typography>
       </Typography>
-      <Grid container spacing={5}>
+      {loading===true?
+      <>
+      loading ...
+      </>  :
+    <Grid container spacing={5}>
         {data.map((product) => {
           return (
             <Grid key={product.id} item xs={12} sm={6} md={4} lg={3}>
@@ -98,7 +104,10 @@ const Products = () => {
             </Grid>
           );
         })}
-      </Grid>
+      </Grid>  
+    
+    }
+      
     </>
   );
 };

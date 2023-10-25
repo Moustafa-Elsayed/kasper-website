@@ -265,6 +265,10 @@ const Head = () => {
               textAlign: "center",
               mb: 1,
               "&:hover": { backgroundColor: "#1976d2" },
+              backgroundColor:
+              location.pathname === "/" ? "#1976d2" : null,
+          
+              
             }}
             onClick={() => {
               navigate("/");
@@ -280,6 +284,8 @@ const Head = () => {
               textAlign: "center",
               mb: 1,
               "&:hover": { backgroundColor: "#1976d2" },
+              backgroundColor:
+              location.pathname === "/about" ? "#1976d2" : null,
             }}
             onClick={() => {
               navigate("/about");
@@ -294,6 +300,8 @@ const Head = () => {
               textAlign: "center",
               mb: 1,
               "&:hover": { backgroundColor: "#1976d2" },
+              backgroundColor:
+              location.pathname === "/contact" ? "#1976d2" : null,
             }}
             onClick={() => {
               navigate("/contact");
@@ -334,18 +342,22 @@ const Head = () => {
                 <MenuItem
                   onClick={() => {
                     handleChangeLng("ar");
+                    setClose("permanent");
+                    setOpen("none");
                   }}
                   value={10}
                 >
-                  Ar
+                  <img src="https://flagcdn.com/w20/eg.png" />
                 </MenuItem>
                 <MenuItem
                   onClick={() => {
                     handleChangeLng("en");
+                    setClose("permanent");
+                    setOpen("none");
                   }}
                   value={20}
                 >
-                  En
+                  <img src="https://flagcdn.com/w20/us.png" />
                 </MenuItem>
               </Select>
             </FormControl>
