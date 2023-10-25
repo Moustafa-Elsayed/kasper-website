@@ -15,7 +15,6 @@ const Contact = () => {
   const onSubmit = () => {
     console.log("submitted");
     postData();
-  
   };
   const { handleBlur, errors, touched, handleChange, values, handleSubmit } =
     useFormik({

@@ -42,7 +42,7 @@ const Head = () => {
     <>
       <AppBar position="fixed" color="primary">
         <Toolbar sx={{ justifyContent: "space-between" }}>
-          <Typography sx={{cursor:"pointer"}}>
+          <Typography sx={{ cursor: "pointer" }}>
             <img
               src=".\img\logo.png"
               onClick={() => {
@@ -113,7 +113,12 @@ const Head = () => {
                 {t("Sign-In")}
               </Button>
               <Box>
-                <FormControl color="secondary" sx={{ m: 1, borderColor: "black" }} fullWidth={false} size="small">
+                <FormControl
+                  color="secondary"
+                  sx={{ m: 1, borderColor: "black" }}
+                  fullWidth={false}
+                  size="small"
+                >
                   <Select value={age} onChange={handleChange} displayEmpty>
                     <MenuItem
                       onClick={() => {
@@ -121,7 +126,7 @@ const Head = () => {
                       }}
                       value={10}
                     >
-                      Ar
+                      <img src="https://flagcdn.com/w20/eg.png" />
                     </MenuItem>
                     <MenuItem
                       onClick={() => {
@@ -129,7 +134,7 @@ const Head = () => {
                       }}
                       value={20}
                     >
-                      En
+                      <img src="https://flagcdn.com/w20/us.png" />
                     </MenuItem>
                   </Select>
                 </FormControl>
@@ -314,7 +319,12 @@ const Head = () => {
             {t("Sign-In")}
           </Button>
           <Box sx={{ textAlign: "center" }}>
-            <FormControl color="secondary" sx={{ m: 1, borderColor: "black" }} fullWidth={false} size="small">
+            <FormControl
+              color="secondary"
+              sx={{ m: 1, borderColor: "black" }}
+              fullWidth={false}
+              size="small"
+            >
               <Select
                 value={age}
                 onChange={handleChange}

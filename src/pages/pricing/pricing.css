@@ -49,7 +49,7 @@ border-radius: 10px
   position: absolute;
 height: 1px;
 width: 120px;
-background-color: blue;
+background-color:#1976d2;
 left: 50%;
 transform: translateX(-50%);
 bottom: -8px;
