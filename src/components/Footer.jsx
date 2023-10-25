@@ -6,7 +6,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 const Footer = () => {
   return (
-    <Box container marginBottom="20px" marginTop="60px" className="footer">
+    <Box  marginBottom="20px" marginTop="60px" className="footer">
       <Grid container spacing={0}>
         <Grid item xs={12} md={6}>
           <div className="socail">
