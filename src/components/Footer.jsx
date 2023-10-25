@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import { Link } from "@mui/material";
 const Footer = () => {
   return (
     <Box marginBottom="20px" marginTop="60px" className="footer">
@@ -11,15 +12,22 @@ const Footer = () => {
         <Grid item xs={12} md={6}>
           <div className="socail">
             <h2>WE ARE SOCIAL</h2>
-            <FacebookIcon
-              sx={{ color: "blue", fontSize: "30px", padding: "10px" }}
-            />
-            <InstagramIcon
-              sx={{ color: "red", fontSize: "30px", padding: "10px" }}
-            />
-            <TwitterIcon
-              sx={{ color: "black", fontSize: "30px", padding: "10px" }}
-            />
+            <Link href="https://www.facebook.com/?locale=ar_AR">
+              <FacebookIcon
+                sx={{ color: "blue", fontSize: "30px", padding: "10px" }}
+              />
+            </Link>
+
+            <Link href="https://www.instagram.com/">
+              <InstagramIcon
+                sx={{ color: "red", fontSize: "30px", padding: "10px" }}
+              />
+            </Link>
+            <Link href="https://twitter.com/?lang=ar">
+              <TwitterIcon
+                sx={{ color: "black", fontSize: "30px", padding: "10px" }}
+              />
+            </Link>
           </div>
         </Grid>
         <Grid item xs={12} md={6}>
