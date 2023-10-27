@@ -118,6 +118,9 @@ const Head = () => {
                   sx={{ m: 1, borderColor: "black" }}
                   fullWidth={false}
                   size="small"
+                  onClick={()=>{
+                    localStorage.setItem("current language","ar")
+                  }}
                 >
                   <Select value={age} onChange={handleChange} displayEmpty>
                     <MenuItem
