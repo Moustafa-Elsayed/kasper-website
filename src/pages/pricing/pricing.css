@@ -1,7 +1,4 @@
 .pricing{
-width: 80% ;
-margin: 0 auto;
-background-color: #b5aeae26;
 border-radius: 10px
 ;}
 .plan-content{
@@ -43,14 +40,4 @@ border-radius: 10px
   width: 100%;
   position: relative;
   
-}
-.pricing ul li:not(:last-child)::after{
-  content: "";
-  position: absolute;
-height: 1px;
-width: 120px;
-background-color:#1976d2;
-left: 50%;
-transform: translateX(-50%);
-bottom: -8px;
 }
