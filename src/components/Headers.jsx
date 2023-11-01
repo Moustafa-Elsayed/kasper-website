@@ -19,6 +19,7 @@ import { useTranslation } from "react-i18next";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import "./header.css"
 // eslint-disable-next-line react/prop-types
 const Head = () => {
   const { t, i18n } = useTranslation();
@@ -110,7 +111,7 @@ const Head = () => {
               </Button>
               <Box>
                 <FormControl
-                  color="success"
+                  className="formcontro"
                   sx={{ m: 1, borderColor: "black" }}
                   fullWidth={false}
                   size="small"
@@ -118,7 +119,7 @@ const Head = () => {
                   <Select
                     value={i18n.language}
                     onChange={(e) => handleChangeLng(e.target.value)}
-                    displayEmpty
+                    
                   >
                     <MenuItem value="en">
                       <img src="https://flagcdn.com/w20/us.png" />
@@ -326,8 +327,8 @@ const Head = () => {
           </Button>
           <Box sx={{ textAlign: "center" }}>
             <FormControl
-              color="success"
-              sx={{ m: 1, borderColor: "black" }}
+              
+              sx={{ m: 1, borderColor: "black", }}
               fullWidth={false}
               size="small"
             >
