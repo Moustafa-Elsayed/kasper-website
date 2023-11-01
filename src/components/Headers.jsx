@@ -30,11 +30,7 @@ const Head = () => {
 
   const [open, setOpen] = useState("none");
   // const [isCollapde, setisCollapde] = useState(false);
-  const [age, setAge] = useState("");
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
   const [close, setClose] = useState("permanent");
   const navigate = useNavigate();
   const location = useLocation();
@@ -114,34 +110,36 @@ const Head = () => {
               </Button>
               <Box>
                 <FormControl
-                  color="secondary"
+                  color="success"
                   sx={{ m: 1, borderColor: "black" }}
                   fullWidth={false}
                   size="small"
-                  onClick={()=>{
-                    localStorage.setItem("current language","ar")
-                  }}
                 >
-                  <Select value={age} onChange={handleChange} displayEmpty>
-                    <MenuItem
-                      onClick={() => {
-                        handleChangeLng("ar");
-                      }}
-                      value={10}
-                    >
-                      <img src="https://flagcdn.com/w20/eg.png" />
-                    </MenuItem>
-                    <MenuItem
-                      onClick={() => {
-                        handleChangeLng("en");
-                      }}
-                      value={20}
-                    >
+                  <Select
+                    value={i18n.language}
+                    onChange={(e) => handleChangeLng(e.target.value)}
+                    displayEmpty
+                  >
+                    <MenuItem value="en">
                       <img src="https://flagcdn.com/w20/us.png" />
+                    </MenuItem>
+                    <MenuItem value="ar">
+                      <img src="https://flagcdn.com/w20/eg.png" />
                     </MenuItem>
                   </Select>
                 </FormControl>
               </Box>
+              {/* <div className="language-dropdown">
+                <select
+                  value={i18n.language}
+                  onChange={(e) => handleChangeLng(e.target.value)}
+                >
+                  <option value="en">
+                    <img src="https://flagcdn.com/w20/eg.png" />
+                  </option>
+                  <option value="ar">Arabic</option>
+                </select>
+              </div> */}
 
               {/* <Button
                 variant="outlined"
@@ -268,10 +266,7 @@ const Head = () => {
               textAlign: "center",
               mb: 1,
               "&:hover": { backgroundColor: "#1976d2" },
-              backgroundColor:
-              location.pathname === "/" ? "#1976d2" : null,
-          
-              
+              backgroundColor: location.pathname === "/" ? "#1976d2" : null,
             }}
             onClick={() => {
               navigate("/");
@@ -288,7 +283,7 @@ const Head = () => {
               mb: 1,
               "&:hover": { backgroundColor: "#1976d2" },
               backgroundColor:
-              location.pathname === "/about" ? "#1976d2" : null,
+                location.pathname === "/about" ? "#1976d2" : null,
             }}
             onClick={() => {
               navigate("/about");
@@ -304,7 +299,7 @@ const Head = () => {
               mb: 1,
               "&:hover": { backgroundColor: "#1976d2" },
               backgroundColor:
-              location.pathname === "/contact" ? "#1976d2" : null,
+                location.pathname === "/contact" ? "#1976d2" : null,
             }}
             onClick={() => {
               navigate("/contact");
@@ -331,78 +326,25 @@ const Head = () => {
           </Button>
           <Box sx={{ textAlign: "center" }}>
             <FormControl
-              color="secondary"
+              color="success"
               sx={{ m: 1, borderColor: "black" }}
               fullWidth={false}
               size="small"
             >
               <Select
-                value={age}
-                onChange={handleChange}
+                value={i18n.language}
+                onChange={(e) => handleChangeLng(e.target.value)}
                 displayEmpty
-                sx={{ margin: "0 auto" }}
               >
-                <MenuItem
-                  onClick={() => {
-                    handleChangeLng("ar");
-                    setClose("permanent");
-                    setOpen("none");
-                  }}
-                  value={10}
-                >
-                  <img src="https://flagcdn.com/w20/eg.png" />
-                </MenuItem>
-                <MenuItem
-                  onClick={() => {
-                    handleChangeLng("en");
-                    setClose("permanent");
-                    setOpen("none");
-                  }}
-                  value={20}
-                >
+                <MenuItem value="en">
                   <img src="https://flagcdn.com/w20/us.png" />
+                </MenuItem>
+                <MenuItem value="ar">
+                  <img src="https://flagcdn.com/w20/eg.png" />
                 </MenuItem>
               </Select>
             </FormControl>
           </Box>
-
-          {/* <Button
-            variant="outlined"
-            sx={{
-              display: "flex",
-              justifyContent: "space-around",
-              alignItems: "center",
-            }}
-          >
-            <LanguageIcon
-              onClick={() => {
-                setisCollapde(true);
-              }}
-            />
-            {isCollapde ? <ExpandLessIcon /> : <ExpandMoreIcon />}
-          </Button>
-
-          <Collapse
-            in={isCollapde}
-            timeout="auto"
-            unmountOnExit
-            sx={{
-              cursor: "pointer",
-            }}
-          >
-            <ListItem>
-              <ListItemButton>
-                <ListItemText onClick={changeAr} primary="Arabic" />
-                <ListItemIcon />
-              </ListItemButton>
-            </ListItem>
-            <ListItem>
-              <ListItemButton>
-                <ListItemText onClick={changeEn} primary="English" />
-                <ListItemIcon />
-              </ListItemButton>
-            </ListItem>
-          </Collapse> */}
         </Box>
       </Drawer>
     </>

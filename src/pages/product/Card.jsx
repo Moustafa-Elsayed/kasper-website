@@ -26,7 +26,7 @@ const Card = () => {
       navigation={true}
       modules={[Autoplay, Pagination, Navigation]}
     
-      scrollbar={{ draggable: true,hide:"false" }}
+    
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}
     >

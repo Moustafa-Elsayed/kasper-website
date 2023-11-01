@@ -19,6 +19,8 @@ const Home = () => {
         <Pricing />
       </Container>
         <Footer />
+      
+      
     </>
   );
 };
