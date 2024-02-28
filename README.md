@@ -40,7 +40,7 @@ Technologies used in the project:
 *  [Swipper Js](https://mui.com/material-ui/getting-started/) 
 *  [Aos animation](https://mui.com/material-ui/getting-started/)
 *  [Formik](www.google.com)
-*  [Yup](wwww.google.com)
+*  [Yup validation](wwww.google.com)
 *  [i18n](wwww.google.com)
 *  
 
