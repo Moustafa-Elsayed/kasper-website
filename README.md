@@ -3,10 +3,7 @@
 <p align="center"><img src="https://i.ibb.co/jgGZmVn/2.png" alt="project"></p>
 
 <h2>🚀 Demo</h2>
-https://eflyer-mocha.vercel.app/
-<h2>Project Screenshots:</h2>
 
-<img src="https://i.ibb.co/F6gvxP5/eflyer1.png" alt="shields" width="800" height="400&quot;/">
 
 
 <h2>🛠️ Installation Steps:</h2>
@@ -41,14 +38,18 @@ Technologies used in the project:
 *  [React Router Dom](https://mui.com/material-ui/getting-started/) 
 *  [Redux Toolkit](https://mui.com/material-ui/getting-started/) 
 *  [Swipper Js](https://mui.com/material-ui/getting-started/) 
-*  [Sass](https://mui.com/material-ui/getting-started/) 
+*  [Aos animation](https://mui.com/material-ui/getting-started/)
+*  [Formik](www.google.com)
+*  [Yup](wwww.google.com)
+*  [i18n](wwww.google.com)
+*  
 
 
 
 
 
 
-
+  
 
 
 <h2>🛡️ Authors:</h2>
