@@ -3,7 +3,7 @@
 <p align="center"><img src="https://i.ibb.co/jgGZmVn/2.png" alt="project"></p>
 
 <h2>🚀 Demo</h2>
-
+https://kasper-one.vercel.app/
 
 
 <h2>🛠️ Installation Steps:</h2>
@@ -11,7 +11,7 @@
 <p>1. Clone the repository</p>
 
 ```
-git clone https://github.com/Moustafa-Elsayed/personal-portfolio.git
+git clone https://github.com/Moustafa-Elsayed/kasper.git
 ```
 
 <p>2. Install npm modules</p>
