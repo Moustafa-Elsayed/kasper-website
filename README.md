@@ -42,6 +42,7 @@ Technologies used in the project:
 *  [Formik](www.google.com)
 *  [Yup validation](wwww.google.com)
 *  [i18n](wwww.google.com)
+*  [Framer motion](wwww.google.com)
 *  
 
 
